@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.chainsys.hotelManagement.dao.ReservationRepository;
-import com.chainsys.hotelManagement.pojo.Reservation;
+import com.chainsys.hotelManagement.model.Reservation;
+import com.chainsys.hotelManagement.repository.ReservationRepository;
 
   @Service
    public class ReservationService {

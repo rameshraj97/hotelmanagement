@@ -5,9 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.chainsys.hotelManagement.dao.BillRepository;
-import com.chainsys.hotelManagement.dao.HotelRepository;
-import com.chainsys.hotelManagement.pojo.Bill;
+import com.chainsys.hotelManagement.model.Bill;
+import com.chainsys.hotelManagement.repository.BillRepository;
+import com.chainsys.hotelManagement.repository.HotelRepository;
 @Service
 public class BillService {
 	@Autowired

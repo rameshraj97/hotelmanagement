@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.chainsys.hotelManagement.pojo.Bill;
-import com.chainsys.hotelManagement.pojo.Hotel;
+import com.chainsys.hotelManagement.model.Bill;
+import com.chainsys.hotelManagement.model.Hotel;
 import com.chainsys.hotelManagement.service.BillService;
 
 

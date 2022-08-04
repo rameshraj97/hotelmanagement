@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.chainsys.hotelManagement.pojo.Reservation;
+import com.chainsys.hotelManagement.model.Reservation;
 import com.chainsys.hotelManagement.service.ReservationService;
 
 @Controller

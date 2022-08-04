@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.chainsys.hotelManagement.pojo.Hotel;
+import com.chainsys.hotelManagement.dto.GuestReservationDTO;
+import com.chainsys.hotelManagement.dto.HotelReservationDTO;
+import com.chainsys.hotelManagement.model.Hotel;
 import com.chainsys.hotelManagement.service.HotelService;
 
 @Controller
@@ -19,7 +21,7 @@ import com.chainsys.hotelManagement.service.HotelService;
 public class HotelController {
 	
 @Autowired
-private HotelService  HotelService;
+private HotelService  hotelService;
 
 
 @GetMapping("/addform")
@@ -31,35 +33,36 @@ public String HotelAddForm(Model model)
 }
 //----------------------------------------------------------------
 @PostMapping("/add")
-public String addnewHotel(@ModelAttribute("addhotel")Hotel hotel)
+public String addnewHotel(@ModelAttribute("addhotel")Hotel hotel,Model model)
 {
-	HotelService.save(hotel);
+	 hotelService.save(hotel);
+	 model.addAttribute("result","Successfully");
   return "redirect:/hotel/list";
 }
 //----------------------------------------------------------------
 @GetMapping("/updateform")
 public String showUpdateForm(@RequestParam("hotelid") int id,Model model)
 {
-    Hotel hotel=HotelService.findById(id);
+    Hotel hotel= hotelService.findById(id);
     model.addAttribute("updatehotel", hotel);
     return "update-hotel";
 }
 //--------------------------------------------------------------------
 @PostMapping("/updatehotel")
 public String updateHotel(@ModelAttribute("updatehotel") Hotel hotel) {
-	HotelService.save(hotel);
+	 hotelService.save(hotel);
     return "redirect:/hotel/list";
 }
 //--------------------------------------------------------------------
 @GetMapping("/deletehotel")
 public String deleteHotel(@RequestParam("hotelid") int id) {
-	HotelService.deleteById(id);
+	 hotelService.deleteById(id);
     return "redirect:/hotel/list";
 }
 //-------------------------------------------------------------------
 @GetMapping("/findbyid")
 public String findHotelById(@RequestParam("id") int id,Model model) {
-    Hotel hotel= HotelService.findById(id);
+    Hotel hotel=  hotelService.findById(id);
     model.addAttribute("findhotelbyid", hotel);
     return "find-hotel";
 }
@@ -67,8 +70,17 @@ public String findHotelById(@RequestParam("id") int id,Model model) {
 @GetMapping("/list")
 public String getAllHotel(Model model)
 {
-    List <Hotel> hotellist =HotelService.getHotel();
+    List <Hotel> hotellist = hotelService.getHotel();
     model.addAttribute("allhotel", hotellist);
     return "list-hotel";
+}
+//-----------------------one to many hotel
+@GetMapping("/getreservationlist")
+public String getHotelReservation(@RequestParam("id") int id, Model model) 
+{
+	HotelReservationDTO dto =  hotelService.getHotelReservation(id);
+	model.addAttribute("gethotel", dto.getHotel());
+	model.addAttribute("reservationdetails", dto.getReservationList());
+	return "hotel-reservation";
 }
 }

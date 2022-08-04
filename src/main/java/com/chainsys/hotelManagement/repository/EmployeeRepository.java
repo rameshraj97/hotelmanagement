@@ -1,11 +1,11 @@
-package com.chainsys.hotelManagement.dao;
+package com.chainsys.hotelManagement.repository;
 
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.chainsys.hotelManagement.pojo.Employee;
-import com.chainsys.hotelManagement.pojo.Hotel;
+import com.chainsys.hotelManagement.model.Employee;
+import com.chainsys.hotelManagement.model.Hotel;
 
 public interface EmployeeRepository extends CrudRepository<Employee,Integer>{
     Employee findById(int id);

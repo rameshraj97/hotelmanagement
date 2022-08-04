@@ -1,11 +1,11 @@
-package com.chainsys.hotelManagement.dao;
+package com.chainsys.hotelManagement.repository;
 
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.chainsys.hotelManagement.pojo.Hotel;
-import com.chainsys.hotelManagement.pojo.Room;
+import com.chainsys.hotelManagement.model.Hotel;
+import com.chainsys.hotelManagement.model.Room;
 public interface RoomRepository extends CrudRepository<Room,Integer>{
 		    Room findById(int id);
 		    Room save(Room rm);

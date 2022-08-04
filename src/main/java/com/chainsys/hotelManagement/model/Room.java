@@ -1,8 +1,12 @@
-package com.chainsys.hotelManagement.pojo;
+package com.chainsys.hotelManagement.model;
+
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -26,6 +30,25 @@ private int payDayrate;
 
 @Column(name="With_toilet")
 private String withToilet;
+
+
+
+@OneToMany(mappedBy = "room",fetch=FetchType.LAZY)
+ 
+private List<Reservation> reservationList;
+
+public List<Reservation> getReservationList() {
+	return reservationList;
+}
+
+public void setReservationList(List<Reservation> reservationList) {
+	this.reservationList = reservationList;
+}
+
+
+
+
+
 
 public int getRoomId() {
 	return roomId;

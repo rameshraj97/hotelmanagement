@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.chainsys.hotelManagement.pojo.Hotel;
-import com.chainsys.hotelManagement.pojo.Room;
+import com.chainsys.hotelManagement.dto.GuestReservationDTO;
+import com.chainsys.hotelManagement.dto.RoomReservationDTO;
+import com.chainsys.hotelManagement.model.Hotel;
+import com.chainsys.hotelManagement.model.Room;
 import com.chainsys.hotelManagement.service.RoomService;
 
 @Controller
@@ -68,5 +70,14 @@ public String getAllRoom(Model model)
     List <Room> roomlist =roomService.getRoom();
     model.addAttribute("allroom", roomlist);
     return "list-room";
+}
+//-------------------one to many
+@GetMapping("/getreservationlist")
+public String getRoomReservation(@RequestParam("id") int id, Model model) 
+{
+	RoomReservationDTO dto = roomService.getRoomReservation(id);
+	model.addAttribute("getroom", dto.getRoom());
+	model.addAttribute("reservationdetails", dto.getReservationList());
+	return "room-reservation";
 }
 }

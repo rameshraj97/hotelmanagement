@@ -6,13 +6,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Add Hotel</title>
+<title>Hotel & Reservation List</title>
 </head>
 <body>
 	<div id="root">
 		<div id="form">
-		
-			<form:form action="add" method="post" modelAttribute="addhotel">
+		<form:form action="add" method="post" modelAttribute="gethotel">
 				<div>
 					<label for="hotelId">Hotel_id</label>
 					<div>
@@ -54,11 +53,43 @@
 					</div>
 				</div>
 				<div>
-					<form:button>Add New</form:button>
+					<form:button>Add Hotel</form:button>
 				</div>
 			</form:form>
 		</div>
 	</div>
-	<div align="center">${result}</div>
+	 <div id="Table root"></div>
+	<table border="2" width="100%" cellpadding="2">
+		<thead>
+			<tr>
+				<th>Res_num</th>
+				<th>Guest_id</th>
+				<th>Hotel_id</th>
+				<th>Room_id</th>
+				<th>Res_date</th>
+				<th>From_date</th>
+				<th>To_date</th>
+				<th>No_of_persons</th>
+				<th>Payment_status</th>
+				</tr>
+		</thead>
+		<tbody>
+           <c:forEach var="reservation" items="${reservationdetails}">
+				<!-- var-variables,items-collection -->
+				<tr>
+					<td>${reservation.reservationNumber}</td>
+					<td>${reservation.guestId}</td>
+					<td>${reservation.hotelId}</td>
+					<td>${reservation.roomId}</td>
+					<td>${reservation.reservationDate}</td>
+					<td>${reservation.fromDate}</td>
+					<td>${reservation.toDate}</td>
+					<td>${reservation.noOfPersons}</td>
+					<td>${reservation.paymentStatus}</td>
+
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
 </body>
 </html>

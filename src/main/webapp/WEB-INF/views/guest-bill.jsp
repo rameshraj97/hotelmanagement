@@ -6,12 +6,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Add Guest</title>
+<title>Guest & Bill list</title>
 </head>
 <body>
-	<div id="root" align="center">
+	<div id="root">
 		<div id="form">
-			<form:form action="add" method="post" modelAttribute="addguest">
+			<form:form action="add" method="post" modelAttribute="getguest">
 				<div>
 					<label for="guestId">Guest_id</label>
 					<div>
@@ -65,13 +65,41 @@
 					<div>
 						<form:input path="aadharNumber" />
 					</div>
-					</div>
+				</div>
 				<div>
 					<form:button>Add Guest</form:button>
 				</div>
 			</form:form>
 		</div>
 	</div>
-	 <div align="center">${result}</div>
+	<body>
+    <div id="Table root"></div>
+    <table border="2" width= "100%" cellpadding="2">
+        <thead>
+            <tr> 
+                <th>Invoice</th>
+                <th>Guest_id</th>
+                <th>Room_charge</th>
+                <th>Invoice_date</th>
+                <th>Res_num</th>
+                <th>Payment_mode</th>
+                <th>Invoice_status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <c:forEach var="bill" items="${billdetails}">
+                <!-- var-variables,items-collection -->
+                <tr>
+                    <td>${bill.invoice}</td>
+                    <td>${bill.guestId}</td>
+                    <td>${bill.roomCharge}</td>
+                    <td>${bill.invoiceDate}</td>
+                    <td>${bill.reservationNumber}</td>
+                    <td>${bill.paymentMode}</td>
+                    <td>${bill.invoiceStatus}</td>
+                </tr>
+            </c:forEach>
+        </tbody>
+    </table>
 </body>
 </html>

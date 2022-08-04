@@ -1,10 +1,10 @@
-package com.chainsys.hotelManagement.dao;
+package com.chainsys.hotelManagement.repository;
 
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.chainsys.hotelManagement.pojo.Hotel;
+import com.chainsys.hotelManagement.model.Hotel;
 
 
 	public interface HotelRepository extends CrudRepository<Hotel,Integer>{

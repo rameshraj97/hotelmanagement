@@ -1,4 +1,4 @@
-package com.chainsys.hotelManagement.pojo;
+package com.chainsys.hotelManagement.model;
 
 import java.util.Date;
 

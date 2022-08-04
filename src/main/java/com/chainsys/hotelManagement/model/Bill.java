@@ -1,13 +1,15 @@
-package com.chainsys.hotelManagement.pojo;
+package com.chainsys.hotelManagement.model;
 
 import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.Cache;
 @Entity
 @Table(name="bill")
 public class Bill {
@@ -32,7 +34,19 @@ public class Bill {
 
 @Column(name="Invoice_status")
  private String invoiceStatus;
+//----------------Bill
+@ManyToOne(fetch =FetchType.LAZY)
+@JoinColumn(name="Guest_id",nullable=false,insertable = false, updatable=false) 
+private Guest guest;
 
+public Guest getGuest() {
+	return guest;
+}
+
+public void setGuest(Guest guest) {
+	this.guest = guest;
+}
+//---------------------
 public int getInvoice() {
 	return invoice;
 }
