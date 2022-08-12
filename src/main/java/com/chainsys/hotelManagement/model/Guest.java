@@ -1,8 +1,7 @@
 package com.chainsys.hotelManagement.model;
 
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -14,37 +13,39 @@ import javax.persistence.Table;
 @Table(name = "guest")
 public class Guest {
 	@Id
-	@Column(name = "Guest_id")
+	@Column(name = "GUEST_ID")
 	private int guestId;
-
-	@Column(name = "F_name")
+	@Column(name = "PASSWORD")
+	private String password;
+	@Column(name = "F_NAME")
 	private String firstName;
-
-	@Column(name = "L_name")
+	@Column(name = "L_NAME")
 	private String lastName;
-
-	@Column(name = "Phone_no")
+	@Column(name = "PHONE_NO")
 	private long phoneNo;
-
-	@Column(name = "Address")
+	@Column(name = "ADDRESS")
 	private String address;
-
-	@Column(name = "Email")
+	@Column(name = "EMAIL")
 	private String email;
-
-	@Column(name = "Gender")
+	@Column(name = "GENDER")
 	private String gender;
-
-	@Column(name = "Dob")
+	@Column(name = "DOB")
 	private Date dob;
-
-	@Column(name = "Aadhar_number")
+	@Column(name = "AADHAR_NUMBER")
 	private long aadharNumber;
-	
-	//------ step1 connection one to many
 
-	@OneToMany(mappedBy ="guest",fetch=FetchType.LAZY )
-	//-------step2 create the reservation object
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	// ------ step1 connection one to many
+
+	@OneToMany(mappedBy = "guest", fetch = FetchType.LAZY)
+	// -------step2 create the reservation object
 	private List<Reservation> reservationList;
 
 	public List<Reservation> getReservationList() {
@@ -54,14 +55,15 @@ public class Guest {
 	public void setReservationList(List<Reservation> reservationList) {
 		this.reservationList = reservationList;
 	}
-   //-------------------------------------
-	@OneToMany(mappedBy ="guest",fetch=FetchType.LAZY )
+
+	// -------------------------------------
+	@OneToMany(mappedBy = "guest", fetch = FetchType.LAZY)
 	private List<Bill> billList;
-	
+
 	public List<Bill> getBillList() {
 		return billList;
 	}
-	
+
 	public void setBillList(List<Bill> billList) {
 		this.billList = billList;
 	}
@@ -74,7 +76,7 @@ public class Guest {
 		this.guestId = guestId;
 	}
 
-	//--------------------
+	// --------------------
 	public String getFirstName() {
 		return firstName;
 	}
@@ -138,5 +140,4 @@ public class Guest {
 	public void setAadharNumber(long aadharNumber) {
 		this.aadharNumber = aadharNumber;
 	}
-
 }

@@ -9,17 +9,18 @@
 <title>Bill List</title>
 </head>
 <body>
+<h1 align="center">Bill Details</h1>
     <div id="Table root"></div>
     <table border="2" width= "100%" cellpadding="2">
         <thead>
             <tr> 
                 <th>Invoice</th>
-                <th>Guest_id</th>
-                <th>Room_charge</th>
-                <th>Invoice_date</th>
-                <th>Res_num</th>
-                <th>Payment_mode</th>
-                <th>Invoice_status</th>
+                <th>GuestId</th>
+                <th>RoomCharge</th>
+                <th>InvoiceDate</th>
+                <th>ReservationNumber</th>
+                <th>PaymentMode</th>
+                <th>InvoiceStatus</th>
             </tr>
         </thead>
         <tbody>

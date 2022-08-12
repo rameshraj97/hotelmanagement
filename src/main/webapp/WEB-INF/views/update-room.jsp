@@ -13,7 +13,7 @@
 		<div id="form">
 			<form:form action="updateroom" method="post" modelAttribute="updateroom">
 				<div>
-					<label for="roomId">Room_id</label>
+							<label for="roomId">Room_id</label>
 					<div>
 						<form:input path="roomId" />
 					</div>
@@ -21,31 +21,63 @@
 				<div>
 					<label for="roomType">Room_type</label>
 					<div>
-						<form:input path="roomType" />
+						<form:radiobutton path="roomType" value="Single Room" />
+						Single Room
+						<form:radiobutton path="roomType" value="Twin Room" />
+						Twin Room
+						<form:radiobutton path="roomType" value="Penthouse Suite" />
+						Penthouse Suite
 					</div>
 				</div>
 				<div>
-					<label for="capacity">capacity</label>
+					<label for="capacity">Capacity</label>
 					<div>
-						<form:input path="capacity" />
+						<form:radiobutton path="capacity" value="single Room type " />
+						Single Room
+						<form:radiobutton path="capacity" value="Tiwn Room " />
+						Tiwn Room
 					</div>
 				</div>
 				<div>
 					<label for="status">Status</label>
 					<div>
 						<form:input path="status" />
-					</div>
-				  </div>
-				<label for="payDayrate">Pay_dayrate</label>
-					<div>
-						<form:input path="payDayrate" />
-					</div>
-				    <div>
-					<label for="withToilet">With_toilet</label>
-					<div>
-						<form:input path="withToilet" />
+						<ul>
+							<h1>Select RoomStatus</h1>
+							<ul>
+								<li>Occupied.</li>
+								<li>Vacant & Dirty.</li>
+								<li>Occupied & Ready.</li>
+								<li>Occupied & Clean.</li>
+								<li>Out of Order.</li>
+								<li>Do Not Disturb..</li>
+							</ul>
+						</ul>
 					</div>
 				</div>
+				<label for="payDayrate">Pay_dayrate</label>
+				<div>
+					<form:radiobutton path="payDayrate" value="${5500}" />
+					5500
+					<form:radiobutton path="payDayrate" value="${6000}" />
+					6000
+					<form:radiobutton path="payDayrate" value="${7500}" />
+					7500
+					<form:radiobutton path="payDayrate" value="${8000}" />
+					8000
+				</div>
+				<div>
+					<label for="withToilet">With_Toilet</label>
+					<div>
+					<form:radiobutton path="withToilet" value="Gravity-Fed" />Gravity-Fed
+					<form:radiobutton path="withToilet" value="Pressure-Assisted" />Pressure-Assisted
+					</div>
+				</div>
+				<div>
+				  <label for="availabity">Availabity</label>
+					<div>
+						<form:input path="availabity" />
+					</div>
 				<div>
 					<form:button>update Room</form:button>
 				</div>

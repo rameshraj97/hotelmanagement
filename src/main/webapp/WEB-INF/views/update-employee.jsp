@@ -35,12 +35,12 @@
 					<div>
 						<form:input path="phone" />
 					</div>
-				  </div>
+				</div>
 				<label for="dob">Dob</label>
-					<div>
-						<form:input path="dob" />
-					</div>
-				    <div>
+				<div>
+					<form:input type="date" path="dob" />
+				</div>
+				<div>
 					<label for="address">Address</label>
 					<div>
 						<form:input path="address" />
@@ -49,38 +49,60 @@
 				<div>
 					<label for="gender">Gender</label>
 					<div>
-						<form:input path="gender" />
+						<form:radiobutton path="gender" value="Male" />
+						Male
+						<form:radiobutton path="gender" value="Female" />
+						Female
 					</div>
 				</div>
 				<div>
-				<div>
-					<label for="email">Email</label>
 					<div>
-						<form:input path="email" />
+						<label for="email">Email</label>
+						<div>
+							<form:input path="email" />
+						</div>
 					</div>
-				</div>
-				<div>
-					<label for="qualification">Qualification</label>
 					<div>
-						<form:input path="qualification" />
+						<label for="qualification">Qualification</label>
+						<div>
+							<form:input path="qualification" />
+						</div>
 					</div>
-				</div>
-				<div>
-					<label for="role">Role</label>
 					<div>
-						<form:input path="role" />
+						<label for="role">Role</label>
+						<div>
+						<form:radiobutton path="role" value="hotel receptionist." />	
+						hotel receptionist.
+						</div>
+						<div>
+							<form:radiobutton path="role" value="maintance" />	
+						maintance
+						</div>
+						<div>
+						<form:radiobutton path="role" value="assistant hotel manager" />	
+					   assistant hotel manager	
+						</div>
 					</div>
-				</div>
-				<div>
-					<label for="dateOfJoining">Date_of_joining</label>
 					<div>
-						<form:input path="dateOfJoining" />
+						<label for="dateOfJoining">Date_of_joining</label>
+						<div>
+							<form:input type="date" path="dateOfJoining" />
+						</div>
 					</div>
-				</div>
-				<div>
-					<label for="department">Department</label>
 					<div>
-						<form:input path="department" />
+						<label for="department">Department</label>
+						<div>
+						<form:radiobutton path="department" value="front Office" />
+						front Office	
+						</div>
+						<div>
+						<form:radiobutton path="department" value="accounts" />
+					    accounts
+						</div>
+						<div>
+						<form:radiobutton path="department" value="housekeeping" />
+					   housekeeping
+						</div>
 					</div>
 				</div>
 				<div>

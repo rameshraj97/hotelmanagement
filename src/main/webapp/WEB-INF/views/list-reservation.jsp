@@ -15,7 +15,6 @@
             <tr> 
                 <th>Res_num</th>
                 <th>Guest_id</th>
-                <th>Hotel_id</th>
                 <th>Room_id</th>
                 <th>Res_date</th>
                 <th>From_date</th>
@@ -31,8 +30,7 @@
                 <tr>
                     <td>${reservation.reservationNumber}</td>
                     <td>${reservation.guestId}</td>
-                    <td>${reservation.hotelId}</td>
-                    <td>${reservation.roomId}</td>
+                     <td>${reservation.roomId}</td>
                     <td>${reservation.reservationDate}</td>
                     <td>${reservation.fromDate}</td>
                     <td>${reservation.toDate}</td>

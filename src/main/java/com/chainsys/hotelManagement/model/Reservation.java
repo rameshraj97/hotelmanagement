@@ -1,28 +1,34 @@
 package com.chainsys.hotelManagement.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "reservation")
 public class Reservation {
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "res_num")
+	@SequenceGenerator(name = "res_num", sequenceName = "res_num", allocationSize = 1)
 	@Column(name = "Res_num")
 	private int reservationNumber;
 
 	@Column(name = "Guest_id")
 	private int guestId;
 
-	@Column(name = "Hotel_id")
-	private int hotelId;
+	/*
+	 * @Column(name = "Hotel_id") private int hotelId;
+	 */
 
 	@Column(name = "Room_id")
 	private int roomId;
@@ -39,7 +45,7 @@ public class Reservation {
 	@Column(name = " No_of_persons")
 	private int noOfPersons;
 
-	@Column(name = " payment_status")
+	@Column(name="Payment_status")
 	private String paymentStatus;
 	
 	
@@ -55,18 +61,20 @@ public class Reservation {
 	public void setGuest(Guest guest) {
 		this.guest = guest;
 	}
-   //---------------Hotel
-	@ManyToOne(fetch= FetchType.LAZY)
-	@JoinColumn(name="Hotel_id",nullable =false,insertable = false, updatable=false)
-	private Hotel hotel;
 
-   public Hotel getHotel() {
-		return hotel;
-	}
-
-	public void setHotel(Hotel hotel) {
-		this.hotel = hotel;
-	}
+	/*
+	 * //---------------Hotel
+	 * 
+	 * @ManyToOne(fetch= FetchType.LAZY)
+	 * 
+	 * @JoinColumn(name="Hotel_id",nullable =false,insertable = false,
+	 * updatable=false) private Hotel hotel;
+	 */
+	/*
+	 * public Hotel getHotel() { return hotel; }
+	 * 
+	 * public void setHotel(Hotel hotel) { this.hotel = hotel; }
+	 */
 
 	//---------------Room
 	@ManyToOne(fetch = FetchType.LAZY)
@@ -97,13 +105,11 @@ public class Reservation {
 		this.guestId = guestId;
 	}
 
-	public int getHotelId() {
-		return hotelId;
-	}
-
-	public void setHotelId(int hotelId) {
-		this.hotelId = hotelId;
-	}
+	/*
+	 * public int getHotelId() { return hotelId; }
+	 * 
+	 * public void setHotelId(int hotelId) { this.hotelId = hotelId; }
+	 */
 
 	public int getRoomId() {
 		return roomId;
@@ -153,4 +159,5 @@ public class Reservation {
 		this.paymentStatus = paymentStatus;
 	}
 
+	
 }

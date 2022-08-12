@@ -25,7 +25,7 @@
 					</div>
 				</div>
 				<div>
-					<label for="hotelId">Hotel_code</label>
+					<label for="hotelId">Hotel_id</label>
 					<div>
 						<form:input path="hotelId" />
 					</div>
@@ -38,30 +38,40 @@
 				  </div>
 				<label for="reservationDate">Res_date</label>
 					<div>
-						<form:input path="reservationDate" />
+						<form:input type ="date" path ="reservationDate" />
 					</div>
 				    <div>
 					<label for="fromDate">From_date</label>
 					<div>
-						<form:input path="fromDate" />
+						<form:input type ="date" path ="fromDate" />
 					</div>
 				</div>
 				<div>
-					<label for="toDate">ToDate</label>
+					<label for="toDate">To_date</label>
 					<div>
-						<form:input path="toDate" />
+					<form:input type ="date" path ="toDate" />
 					</div>
 				</div>
 				<div>
 					<label for="noOfPersons">No_of_persons</label>
 					<div>
-						<form:input path="noOfPersons" />
+					<form:radiobutton path="noOfPersons" value="${1}" />
+					1
+					<form:radiobutton path="noOfPersons" value="${2}" />
+					2
+					<form:radiobutton path="noOfPersons" value="${3}" />
+					3
+					<form:radiobutton path="noOfPersons" value="${4}" />
+					4
+					<form:radiobutton path="noOfPersons" value="${5}" />
+					5
 					</div>
 				</div>
 				<div>
-					<label for="fromDate">Payment_status</label>
+					<label for="paymentStatus">Payment_status</label>
 					<div>
-						<form:input path="paymentStatus" />
+						<form:radiobutton path="paymentStatus" value="Card"/>Card
+						<form:radiobutton path="paymentStatus" value="Cash"/>Cash
 					</div>
 				</div>
 				<div>

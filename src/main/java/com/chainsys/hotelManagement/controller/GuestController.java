@@ -2,9 +2,13 @@ package com.chainsys.hotelManagement.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.chainsys.hotelManagement.dto.GuestBillDTO;
 import com.chainsys.hotelManagement.dto.GuestReservationDTO;
+import com.chainsys.hotelManagement.model.Employee;
 import com.chainsys.hotelManagement.model.Guest;
 import com.chainsys.hotelManagement.service.GuestService;
 
@@ -30,12 +35,13 @@ public class GuestController {
 		return "add-guest-form";
 	}
 
-//----------------------------------------------------------------
+//-----------------------------addform-----------------------------------
 	@PostMapping("/add")
-	public String addnewguest(@ModelAttribute("addguest") Guest guest,Model model) {
-		guestService.save(guest);
+	public String addnewguest(@ModelAttribute("addguest") Guest guest, Model model  ) 
+		 {
+		guestService.save(guest);	
 		model.addAttribute("result", " Successfully...");
-		return "add-guest-form";
+		return "redirect:/home/list";
 	}
 
 //---------------------------------------
@@ -48,9 +54,10 @@ public class GuestController {
 
 //------------------------------------------
 	@PostMapping("/updateguest")
-	public String updateguest(@ModelAttribute("updateguest") Guest guest) {
+	public String updateguest(@ModelAttribute("updateguest") Guest guest, Model model) {
 		guestService.save(guest);
-		return "redirect:/guest/list";
+		model.addAttribute("result", " Changed");
+		return "update-guest";
 	}
 
 //------------------------------------
@@ -75,22 +82,28 @@ public class GuestController {
 		model.addAttribute("allguest", guestlist);
 		return "list-guest";
 	}
+
 //---one to many guest 
 	@GetMapping("/getreservationlist")
-	public String getGuestReservation(@RequestParam("id") int id, Model model) 
-	{
+	public String getGuestReservation(@RequestParam("id") int id, Model model) {
 		GuestReservationDTO dto = guestService.getGuestReservation(id);
 		model.addAttribute("getguest", dto.getGuest());
 		model.addAttribute("reservationdetails", dto.getReservationList());
 		return "guest-reservation";
 	}
+
 //------------------------
 	@GetMapping("/getbilllist")
-	public String getGuestBill(@RequestParam("id") int id, Model model) 
-	{
+	public String getGuestBill(@RequestParam("id") int id, Model model) {
 		GuestBillDTO dto = guestService.getGuestBill(id);
 		model.addAttribute("getguest", dto.getGuest());
 		model.addAttribute("billdetails", dto.getBillList());
 		return "guest-bill";
-	}	
+	}
+
+	
+//	@PostMapping("/room")
+//	public String redirectToRoom(@RequestParam("id")int id,Model model){
+//		model.add
+//	}
 }

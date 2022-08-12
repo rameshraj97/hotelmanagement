@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="Table root"></div>
-    <table border="2" width= "100%" cellpadding="2">
+    <table border=2px width= "100%" cellpadding="2">
         <thead>
             <tr> 
                 <th>Hotel_id</th>
@@ -25,7 +25,7 @@
         <tbody>
             <c:forEach var="hotel" items="${allhotel}">
                 <!-- var-variables,items-collection -->
-                <tr>
+               <tr>
                     <td>${hotel.hotelId}</td>
                     <td>${hotel.hotelName}</td>
                     <td>${hotel.location}</td>
@@ -33,6 +33,7 @@
                     <td>${hotel.numberOfRooms}</td>
                     <td>${hotel.phoneNo}</td>
                     <td>${hotel.website}</td>
+                <td><a href="/room/list?hotelId=${hotel.hotelId}"><button>Go</button></a></td>
                 </tr>
             </c:forEach>
         </tbody>

@@ -9,63 +9,63 @@
 <title>Add Reservation</title>
 </head>
 <body>
+<h1>Room Reservation</h1>
 	<div id="root">
 		<div id="form">
-			<form:form action="add" method="post" modelAttribute="addreservation">
+			<form:form action="reservationadd" method="post" modelAttribute="addreservation">
 				<div>
-					<label for="reservationNumber">Res_num</label>
+					<label for="guestId">GuestId</label>
 					<div>
-						<form:input path="reservationNumber" />
+						<form:input path="guestId" value="${guestId}" />
 					</div>
 				</div>
+				
 				<div>
-					<label for="guestId">Guest_id</label>
+					<label for="roomId">RoomId</label>
 					<div>
-						<form:input path="guestId" />
-					</div>
-				</div>
-				<div>
-					<label for="hotelId">Hotel_id</label>
-					<div>
-						<form:input path="hotelId" />
-					</div>
-				</div>
-				<div>
-					<label for="roomId">Room_id</label>
-					<div>
-						<form:input path="roomId" />
+						<form:input path="roomId" value="${roomId}" />
 					</div>
 				  </div>
-				<label for="reservationDate">Res_date</label>
+				<label for="reservationDate">ReservationDate</label>
 					<div>
-						<form:input path="reservationDate" />
+						<form:input type ="date" path ="reservationDate" />
 					</div>
 				    <div>
-					<label for="fromDate">From_date</label>
+					<label for="fromDate">FromDate</label>
 					<div>
-						<form:input path="fromDate" />
+						<form:input type ="date" path ="fromDate" />
 					</div>
 				</div>
 				<div>
-					<label for="toDate">To_date</label>
+					<label for="toDate">ToDate</label>
 					<div>
-						<form:input path="toDate" />
+					<form:input type ="date" path ="toDate" />
 					</div>
 				</div>
 				<div>
-					<label for="noOfPersons">No_of_persons</label>
+					<label for="noOfPersons">NoOfPersons</label>
 					<div>
-						<form:input path="noOfPersons" />
+					<form:radiobutton path="noOfPersons" value="${1}" required="true" />
+					1
+					<form:radiobutton path="noOfPersons" value="${2}" required="true" />
+					2
+					<form:radiobutton path="noOfPersons" value="${3}" required="true" />
+					3
+					<form:radiobutton path="noOfPersons" value="${4}" required="true"/>
+					4
+					<form:radiobutton path="noOfPersons" value="${5}" required="true"/>
+					5
 					</div>
 				</div>
 				<div>
-					<label for="paymentStatus">Payment_status</label>
+					<label for="paymentStatus">PaymentStatus</label>
 					<div>
-						<form:input path="paymentStatus" />
+						<form:radiobutton path="paymentStatus" value="Card"/>Card
+						<form:radiobutton path="paymentStatus" value="Cash"/>Cash
 					</div>
 				</div>
 				<div>
-					<form:button>Add New</form:button>
+					<form:button >submit</form:button>
 				</div>
 			</form:form>
 		</div>

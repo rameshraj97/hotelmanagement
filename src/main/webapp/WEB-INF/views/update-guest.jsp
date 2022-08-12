@@ -13,11 +13,15 @@
 		<div id="form">
 			<form:form action="updateguest" method="post" modelAttribute="updateguest">
 				<div>
-					<label for="guestId">Guest_id</label>
+					<label for="password">Password</label>
+					<div>
+						<form:input path="password" />
+					</div>
+				</div>
+				<label for="guestId">Guest_id</label>
 					<div>
 						<form:input path="guestId" />
 					</div>
-				</div>
 				<div>
 					<label for="firstName">F_name</label>
 					<div>
@@ -51,13 +55,14 @@
 				<div>
 					<label for="gender">Gender</label>
 					<div>
-						<form:input path="gender" />
+						<form:radiobutton path="gender" value="Male"/>Male
+						<form:radiobutton path="gender" value="Female"/>Female
 					</div>
 				</div>
 				<div>
 					<label for="dob">Dob</label>
 					<div>
-						<form:input path="dob" />
+						<form:input type ="date" path ="dob" />
 					</div>
 				</div>
 				<div>
@@ -71,5 +76,6 @@
 			</form:form>
 		</div>
 	</div>
+	 <div>${result}</div>
 </body>
 </html>

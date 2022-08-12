@@ -6,6 +6,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -15,7 +17,6 @@ public class Room {
 @Id
 @Column(name="Room_id")
 private int roomId;
-
 @Column(name="Room_type")
 private String roomType;
 
@@ -33,8 +34,15 @@ private String withToilet;
 
 
 
+//public String getAvailabity() {
+//	return availabity;
+//}
+//
+//public void setAvailabity(String availabity) {
+//	this.availabity = availabity;
+//}
+
 @OneToMany(mappedBy = "room",fetch=FetchType.LAZY)
- 
 private List<Reservation> reservationList;
 
 public List<Reservation> getReservationList() {
@@ -44,11 +52,6 @@ public List<Reservation> getReservationList() {
 public void setReservationList(List<Reservation> reservationList) {
 	this.reservationList = reservationList;
 }
-
-
-
-
-
 
 public int getRoomId() {
 	return roomId;

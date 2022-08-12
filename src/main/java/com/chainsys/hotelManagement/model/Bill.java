@@ -1,39 +1,58 @@
 package com.chainsys.hotelManagement.model;
 
-import java.util.Date;
+
+
+import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="bill")
 public class Bill {
 @Id
-@Column(name="Invoice_num")
+@GeneratedValue(strategy = GenerationType.AUTO, generator = "invoice_seq")
+@SequenceGenerator(name = "invoice_seq", sequenceName = "invoice_seq",  allocationSize = 1)
+@Column(name="INVOICE_NUMBER")
  private int invoice;
 
 @Column(name=" Guest_id")
  private int guestId;
 
-@Column(name="Room_charge")
+@Column(name="ROOM_CHARGE")
  private int roomCharge;
 
-@Column(name="Invoice_date")
+@Column(name="INVOICE_DATE")
  private Date invoiceDate;
 
 @Column(name="Res_num")
- private int reservationNumber;
+private int reservationNumber;
 
 @Column(name="Payment_mode")
- private String paymentMode;
+private String paymentMode;
 
-@Column(name="Invoice_status")
- private String invoiceStatus;
+@Column(name="INVOICE_STATUS ")
+private String invoiceStatus;
+
+
+
+public Date getInvoiceDate() {
+	return invoiceDate;
+}
+
+public void setInvoiceDate(Date invoiceDate) {
+	this.invoiceDate = invoiceDate;
+}
+
+
 //----------------Bill
 @ManyToOne(fetch =FetchType.LAZY)
 @JoinColumn(name="Guest_id",nullable=false,insertable = false, updatable=false) 
@@ -71,13 +90,7 @@ public void setRoomCharge(int roomCharge) {
 	this.roomCharge = roomCharge;
 }
 
-public Date getInvoiceDate() {
-	return invoiceDate;
-}
 
-public void setInvoiceDate(Date invoiceDate) {
-	this.invoiceDate = invoiceDate;
-}
 
 public int getReservationNumber() {
 	return reservationNumber;

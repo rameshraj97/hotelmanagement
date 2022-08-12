@@ -9,52 +9,62 @@
 <title>Add Bill</title>
 </head>
 <body>
+<h1 align="center">Bill</h1>
 	<div id="root">
 		<div id="form">
-			<form:form action="add" method="post" modelAttribute="addbill">
+			<form:form action="addbill" method="post" modelAttribute="addbill">
 				<div>
-					<label for="invoice">invoice</label>
+				    <h1>Guest Invoice</h1>
+					<label for="invoice">Invoice</label>
 					<div>
 						<form:input path="invoice" />
 					</div>
 				</div>
 				<div>
-					<label for="guestId">guest_id</label>
+					<label for="guestId">GuestId</label>
 					<div>
 						<form:input path="guestId" />
 					</div>
 				</div>
 				<div>
-					<label for="roomCharge">room_charge</label>
+					<label for="roomCharge">RoomCharge</label>
 					<div>
-						<form:input path="roomCharge" />
+					  <form:checkbox path="roomCharge" value="${80}"/> Key-80
+					  <form:checkbox path="roomCharge" value="${250}"/>Pillow-250
+					  <form:checkbox path="roomCharge" value="${200}"/>BetSheet-300
+					  <form:checkbox path="roomCharge" value="${100}"/>Remotecontrol(TV)-150
+					  <form:checkbox path="roomCharge" value="${150}"/>Remotecontrol(Air)-200
+					  <form:checkbox path="roomCharge" value="${120}"/>Glass-90
+					  <form:checkbox path="roomCharge" value="${220}"/>Kettle-120
 					</div>
 				</div>
 				<div>
-					<label for="invoiceDate">invoice_date</label>
+					<label for="invoiceDate">Invoicedate</label>
 					<div>
-						<form:input path="invoiceDate" />
+							<form:input type ="date" path ="invoiceDate"  />
 					</div>
 				  </div>
-				<label for="reservationNumber">res_num</label>
+				<label for="reservationNumber">ReservationNumber</label>
 					<div>
 						<form:input path="reservationNumber" />
 					</div>
 				    <div>
-					<label for=paymentMode>payment_mode</label>
+					<label for="paymentMode">PaymentMode</label>
 					<div>
-						<form:input path="paymentMode" />
+						<form:radiobutton path="paymentMode" value="DebitCard"/>DebitCard
+						<form:radiobutton path="paymentMode" value="Cash"/>Cash
 					</div>
 				</div>
 				<div>
-					<label for=invoiceStatus>invoice_status</label>
+					<label for="invoiceStatus">InvoiceStatus</label>
 					<div>
-						<form:input path="invoiceStatus" />
+					    <form:radiobutton path="invoiceStatus" value="Paid"/>Paid
+						<form:radiobutton path="invoiceStatus" value="NotPaid"/>NotPaid
 					</div>
 				</div>
+				   <form:button>submit</form:button>
 				<div>
-					<form:button>Add New</form:button>
-				</div>
+	          </div>
 			</form:form>
 		</div>
 	</div>

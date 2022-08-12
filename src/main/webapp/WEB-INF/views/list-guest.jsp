@@ -9,11 +9,13 @@
 <title>Guest List</title>
 </head>
 <body>
+<h1 align="center">Guest Details</h1>
     <div id="Table root"></div>
    <table border="2" width= "100%" cellpadding="2">
         <thead>
             <tr> 
-                <th>Guest_id</th>
+               <th>Guest_id</th>
+               <th>Password</th>
                 <th>F_name</th>
                 <th>L_name</th>
                 <th>Phone_no</th>
@@ -28,7 +30,9 @@
             <c:forEach var="guest" items="${allguest}">
                 <!-- var-variables,items-collection -->
                 <tr>
+                   
                     <td>${guest.guestId}</td>
+                    <td>${guest.password}</td>
                     <td>${guest.firstName}</td>
                     <td>${guest.lastName}</td>
                     <td>${guest.phoneNo}</td>

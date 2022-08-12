@@ -20,13 +20,13 @@
 				</div>
 
 				<div>
-					<label for="firstName">F_name</label>
+					<label for="firstName">Firstname</label>
 					<div>
 						<form:input path="firstName" readonly="true" />
 					</div>
 				</div>
 				<div>
-					<label for="lastName">L_name</label>
+					<label for="lastName">Lastname</label>
 					<div>
 						<form:input path="lastName" readonly="true" />
 					</div>

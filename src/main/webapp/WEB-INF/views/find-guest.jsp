@@ -13,12 +13,15 @@
 		<div id="form">
 			<form:form action="" method="post" modelAttribute="findguestbyid">
 				<div>
-					<label for="guestId">Guest_id</label>
+					<label for="password">Password</label>
+					<div>
+						<form:input path="password" readonly="true"/>
+					</div>
+				</div>
+				<label for="guestId">Guest_id</label>
 					<div>
 						<form:input path="guestId" readonly="true"/>
 					</div>
-				</div>
-				
 				<div>
 					<label for="firstName">F_name</label>
 					<div>
@@ -52,13 +55,14 @@
 				<div>
 					<label for="gender">Email</label>
 					<div>
-						<form:input path="gender" readonly="true"/>
+						<form:radiobutton path="gender" value="Male"/>Male
+						<form:radiobutton path="gender" value="Female"/>Female
 					</div>
 				</div>
 				<div>
 					<label for=" dob">Gender</label>
 					<div>
-						<form:input path="dob" readonly="true"/>
+						<form:input type ="date" path ="dob" />
 					</div>
 				</div>
 				<div>

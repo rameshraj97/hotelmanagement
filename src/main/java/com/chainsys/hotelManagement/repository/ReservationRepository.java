@@ -16,6 +16,6 @@ public interface ReservationRepository extends CrudRepository<Reservation,Intege
 	    void deleteById(int id);
 	    List<Reservation> findAll();
 	    List<Reservation> findByGuestId(int id);
-	    List<Reservation> findByHotelId(int id);
+	    //List<Reservation> findByHotelId(int id);
 	    List<Reservation> findByRoomId(int id);
 }

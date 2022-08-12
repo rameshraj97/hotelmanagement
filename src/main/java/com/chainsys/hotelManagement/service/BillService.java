@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import com.chainsys.hotelManagement.model.Bill;
 import com.chainsys.hotelManagement.repository.BillRepository;
-import com.chainsys.hotelManagement.repository.HotelRepository;
 @Service
 public class BillService {
 	@Autowired

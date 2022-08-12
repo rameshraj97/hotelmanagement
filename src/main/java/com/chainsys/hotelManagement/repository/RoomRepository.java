@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.chainsys.hotelManagement.model.Hotel;
 import com.chainsys.hotelManagement.model.Room;
 public interface RoomRepository extends CrudRepository<Room,Integer>{
 		    Room findById(int id);
@@ -12,7 +11,6 @@ public interface RoomRepository extends CrudRepository<Room,Integer>{
 		 // Used for both adding new Hotel and Modifying new Hotel   
 		    void deleteById(int id);
 		    List<Room> findAll();
-		    
 	}
 
 

@@ -6,9 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.chainsys.hotelManagement.model.Employee;
-import com.chainsys.hotelManagement.model.Hotel;
 import com.chainsys.hotelManagement.repository.EmployeeRepository;
-import com.chainsys.hotelManagement.repository.HotelRepository;
 
 @Service
 public class EmployeeService {

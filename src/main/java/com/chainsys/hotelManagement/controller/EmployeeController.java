@@ -12,9 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.chainsys.hotelManagement.model.Employee;
-import com.chainsys.hotelManagement.model.Hotel;
 import com.chainsys.hotelManagement.service.EmployeeService;
-import com.chainsys.hotelManagement.service.HotelService;
 
 @Controller
 @RequestMapping("/employee")

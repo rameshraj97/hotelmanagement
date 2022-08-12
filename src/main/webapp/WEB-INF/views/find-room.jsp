@@ -49,6 +49,9 @@
 						<form:input path="withToilet" readonly="true"/>
 					</div>
 				</div>
+				<label for="availabity">Room_id</label>
+					<div>
+						<form:input path="availabity" readonly="true"/>
 				<div>
 			   </div>
 			</form:form>

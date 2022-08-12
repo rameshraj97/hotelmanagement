@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 
 import com.chainsys.hotelManagement.model.Employee;
-import com.chainsys.hotelManagement.model.Hotel;
 
 public interface EmployeeRepository extends CrudRepository<Employee,Integer>{
     Employee findById(int id);

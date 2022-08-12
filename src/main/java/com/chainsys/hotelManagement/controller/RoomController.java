@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.chainsys.hotelManagement.dto.GuestReservationDTO;
 import com.chainsys.hotelManagement.dto.RoomReservationDTO;
-import com.chainsys.hotelManagement.model.Hotel;
 import com.chainsys.hotelManagement.model.Room;
 import com.chainsys.hotelManagement.service.RoomService;
 
@@ -32,9 +31,9 @@ public String RoomAddFrom(Model model) {
 //------------------------------------------
 @PostMapping("/add")
 public String addnewRoom(@ModelAttribute("addroom")Room room)
-{
-	roomService.save(room);
-  return "redirect:/room/list";
+{	
+  roomService.save(room);
+  return "redirect:/reservation/addform";
 }
 //-------------------------------------------
 @GetMapping("/updateform")
@@ -67,7 +66,7 @@ public String findRoomById(@RequestParam("id") int id,Model model) {
 @GetMapping("/list")
 public String getAllRoom(Model model)
 {
-    List <Room> roomlist =roomService.getRoom();
+	List <Room> roomlist =roomService.getRoom();
     model.addAttribute("allroom", roomlist);
     return "list-room";
 }

@@ -5,7 +5,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.chainsys.hotelManagement.model.Employee;
 import com.chainsys.hotelManagement.model.Guest;
-import com.chainsys.hotelManagement.model.Hotel;
 
 public interface GuestRepository extends CrudRepository<Guest,Integer>{
     Guest findById(int id);
@@ -13,4 +12,5 @@ public interface GuestRepository extends CrudRepository<Guest,Integer>{
  // Used for both adding new Hotel and Modifying new Hotel   
     void deleteById(int id);
     List<Guest> findAll();
+    Guest findByEmailAndPassword(String email, String string);
 }

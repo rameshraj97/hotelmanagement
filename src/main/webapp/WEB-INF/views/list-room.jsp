@@ -5,34 +5,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Room List</title>
-</head>
-<body>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(150, 212, 212, 0.4);
+}
+
+th:nth-child(even),td:nth-child(even) {
+  background-color: rgba(150, 212, 212, 0.4);
+}
+</style>
+
+
     <div id="Table root"></div>
     <table border="2" width= "100%" cellpadding="2">
-        <thead>
-            <tr> 
+        <thead><tr>    
+            
                 <th>Room_id</th>
                 <th>Room_type</th>
                 <th>Capacity</th>
                 <th>Status</th>
                 <th>Pay_dayrate</th>
                 <th>With_toilet</th>
-               
-            </tr>
+               </tr>
         </thead>
         <tbody>
+         <h1 align="center">Room Booking</h1>
             <c:forEach var="room" items="${allroom}">
                 <!-- var-variables,items-collection -->
                 <tr>
-                    <td>${room.roomId}</td>
-                    <td>${room.roomType}</td>
-                    <td>${room.capacity}</td>
-                    <td>${room.status}</td>
-                    <td>${room.payDayrate}</td>
-                    <td>${room.withToilet}</td>
-                   
+                    <th>${room.roomId}</th>
+                    <th>${room.roomType}</th>
+                    <th>${room.capacity}</th>
+                    <th>${room.status}</th>
+                    <th>${room.payDayrate}</th>
+                    <th>${room.withToilet}</th>
+                   	<th><a href="guestlogin?roomId=${room.roomId}"><button>Book</button></a></th>
                 </tr>
             </c:forEach>
         </tbody>
