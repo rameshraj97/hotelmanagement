@@ -30,9 +30,10 @@ public class BillController {
 	}
 	//-------------------------------------
 	@PostMapping("/add")
-	public String addnewBill(@ModelAttribute("addbill")Bill bill)
+	public String addnewBill(@ModelAttribute("addbill")Bill bill,Model model)
 	{
 		billService.save(bill);
+	  model.addAttribute("result","Thank you");
 	  return "redirect:/bill/list";
 	}
 	//----------------------------------
@@ -55,7 +56,7 @@ public class BillController {
 		billService.deleteById(id);
 	    return "redirect:/bill/list";
 	}
-	//----------------------------------
+	
 	@GetMapping("/findbyid")
 	public String findBillById(@RequestParam("id") int id,Model model) {
 	    Bill bill= billService.findById(id);
@@ -68,6 +69,7 @@ public class BillController {
 	{
 	    List <Bill> billlist =billService.getBill();
 	    model.addAttribute("allbill", billlist);
+	   
 	    return "list-bill";
 	}
 	}

@@ -3,7 +3,11 @@ package com.chainsys.hotelManagement.businesslogic;
 import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
+
+import com.chainsys.hotelManagement.model.Room;
 
 public class Logic {
 	private Logic() {
@@ -21,5 +25,15 @@ public class Logic {
 			e.printStackTrace();
 		}
 		return date;
+	}
+	public static List<Room> getAvailableroomList(List<Room>roomList){
+		List<Room>availableRooList=new ArrayList<>();
+		for(int i=0;i<roomList.size();i++) {
+			Room room=roomList.get(i);
+			if(room.getStatus().equalsIgnoreCase("available")) {
+				availableRooList.add(room);
+			}
+		}
+		return availableRooList;
 	}
 }

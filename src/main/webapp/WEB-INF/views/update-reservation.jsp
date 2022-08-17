@@ -19,41 +19,38 @@
 					</div>
 				</div>
 				<div>
-					<label for="guestId">Guest_id</label>
+					<label for="guestId">GuestId</label>
 					<div>
 						<form:input path="guestId" />
 					</div>
 				</div>
 				<div>
-					<label for="hotelId">Hotel_id</label>
-					<div>
-						<form:input path="hotelId" />
-					</div>
+				
 				</div>
 				<div>
-					<label for="roomId">Room_id</label>
+					<label for="roomId">RoomId</label>
 					<div>
 						<form:input path="roomId" />
 					</div>
 				  </div>
-				<label for="reservationDate">Res_date</label>
+				<label for="reservationDate">ReservationDate</label>
 					<div>
 						<form:input type ="date" path ="reservationDate" />
 					</div>
 				    <div>
-					<label for="fromDate">From_date</label>
+					<label for="fromDate">FromDate</label>
 					<div>
 						<form:input type ="date" path ="fromDate" />
 					</div>
 				</div>
 				<div>
-					<label for="toDate">To_date</label>
+					<label for="toDate">ToDate</label>
 					<div>
 					<form:input type ="date" path ="toDate" />
 					</div>
 				</div>
 				<div>
-					<label for="noOfPersons">No_of_persons</label>
+					<label for="noOfPersons">No_ofPersons</label>
 					<div>
 					<form:radiobutton path="noOfPersons" value="${1}" />
 					1

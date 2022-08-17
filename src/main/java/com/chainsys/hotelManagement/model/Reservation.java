@@ -25,11 +25,6 @@ public class Reservation {
 
 	@Column(name = "Guest_id")
 	private int guestId;
-
-	/*
-	 * @Column(name = "Hotel_id") private int hotelId;
-	 */
-
 	@Column(name = "Room_id")
 	private int roomId;
 

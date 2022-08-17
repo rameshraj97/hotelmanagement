@@ -9,17 +9,18 @@
 <title>Insert title here</title>
 </head>
 <body>
+<h1>New Guest booked Details</h1>
 	<div id="root">
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="getroom">
 				<div>
-					<label for="roomId">Room_id</label>
+					<label for="roomId">RoomId</label>
 					<div>
 						<form:input path="roomId" />
 					</div>
 				</div>
 				<div>
-					<label for="roomType">Room_type</label>
+					<label for="roomType">RoomType</label>
 					<div>
 						<form:input path="roomType" />
 					</div>
@@ -36,12 +37,12 @@
 						<form:input path="status" />
 					</div>
 				  </div>
-				<label for="payDayrate">Pay_dayrate</label>
+				<label for="payDayrate">Payrate</label>
 					<div>
 						<form:input path="payDayrate" />
 					</div>
 				    <div>
-					<label for="withToilet">With_toilet</label>
+					<label for="withToilet">WithToilet</label>
 					<div>
 						<form:input path="withToilet" />
 					</div>
@@ -56,15 +57,14 @@
 	<table border="2" width="100%" cellpadding="2">
 		<thead>
 			<tr>
-				<th>Res_num</th>
-				<th>Guest_id</th>
-				<th>Hotel_id</th>
-				<th>Room_id</th>
-				<th>Res_date</th>
-				<th>From_date</th>
-				<th>To_date</th>
-				<th>No_of_persons</th>
-				<th>Payment_status</th>
+				<th>ReservationNumber</th>
+				<th>GuestId</th>
+				<th>RoomId</th>
+				<th>ReservationDate</th>
+				<th>FromDate</th>
+				<th>ToDate</th>
+				<th>NoofPersons</th>
+				<th>PaymentStatus</th>
 				</tr>
 		</thead>
 		<tbody>
@@ -73,8 +73,7 @@
 				<tr>
 					<td>${reservation.reservationNumber}</td>
 					<td>${reservation.guestId}</td>
-					<td>${reservation.hotelId}</td>
-					<td>${reservation.roomId}</td>
+				    <td>${reservation.roomId}</td>
 					<td>${reservation.reservationDate}</td>
 					<td>${reservation.fromDate}</td>
 					<td>${reservation.toDate}</td>

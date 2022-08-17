@@ -13,14 +13,15 @@
     <table border="2" width= "100%" cellpadding="2">
         <thead>
             <tr> 
-                <th>Res_num</th>
-                <th>Guest_id</th>
-                <th>Room_id</th>
-                <th>Res_date</th>
-                <th>From_date</th>
-                <th>To_date</th>
-                 <th>No_of_persons</th>
-                  <th>Payment_status</th>
+                <th>ReservationNumber</th>
+                <th>GuestId</th>
+                <th>RoomId</th>
+                <th>ReservationDate</th>
+                <th>FromDate</th>
+                <th>ToDate</th>
+                 <th>NoofPersons</th>
+                  <th>PaymentStatus</th>
+                  
                
             </tr>
         </thead>
@@ -29,6 +30,7 @@
                 <!-- var-variables,items-collection -->
                 <tr>
                     <td>${reservation.reservationNumber}</td>
+                   
                     <td>${reservation.guestId}</td>
                      <td>${reservation.roomId}</td>
                     <td>${reservation.reservationDate}</td>
@@ -36,7 +38,9 @@
                     <td>${reservation.toDate}</td>
                     <td>${reservation.noOfPersons}</td>
                     <td>${reservation.paymentStatus}</td>
-                     
+                    
+                 
+                    
                 </tr>
             </c:forEach>
         </tbody>

@@ -9,6 +9,7 @@
 <title>Add Bill</title>
 </head>
 <body>
+  <h1>Bill Details<h1>
 	<div id="root">
 		<div id="form">
 			<form:form action="updatebill" method="post" modelAttribute="updatebill">
@@ -48,7 +49,7 @@
 						<form:input path="reservationNumber" />
 					</div>
 				    <div>
-					<label for="paymentMode">Payment_Mode</label>
+					<label for="paymentMode">PaymentMode</label>
 					<div>
 						<form:radiobutton path="paymentMode" value="DebitCard"/>DebitCard
 						<form:radiobutton path="paymentMode" value="Cash"/>Cash

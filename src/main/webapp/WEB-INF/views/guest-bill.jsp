@@ -13,25 +13,25 @@
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="getguest">
 				<div>
-					<label for="guestId">Guest_id</label>
+					<label for="guestId">GuestId</label>
 					<div>
 						<form:input path="guestId" />
 					</div>
 				</div>
 				<div>
-					<label for="firstName">F_name</label>
+					<label for="firstName">FirstName</label>
 					<div>
 						<form:input path="firstName" />
 					</div>
 				</div>
 				<div>
-					<label for="lastName">L_name</label>
+					<label for="lastName">LastName</label>
 					<div>
 						<form:input path="lastName" />
 					</div>
 				</div>
 				<div>
-					<label for="phoneNo">Phone_no</label>
+					<label for="phoneNo">PhoneNo</label>
 					<div>
 						<form:input path="phoneNo" />
 					</div>
@@ -61,7 +61,7 @@
 					</div>
 				</div>
 				<div>
-					<label for="aadharNumber">Aadhar_number</label>
+					<label for="aadharNumber">AadharNumber</label>
 					<div>
 						<form:input path="aadharNumber" />
 					</div>
@@ -78,12 +78,12 @@
         <thead>
             <tr> 
                 <th>Invoice</th>
-                <th>Guest_id</th>
-                <th>Room_charge</th>
-                <th>Invoice_date</th>
-                <th>Res_num</th>
-                <th>Payment_mode</th>
-                <th>Invoice_status</th>
+                <th>GuestId</th>
+                <th>RoomCharge</th>
+                <th>InvoiceDate</th>
+                <th>ReservationNumber</th>
+                <th>PaymentMode</th>
+                <th>InvoiceStatus</th>
             </tr>
         </thead>
         <tbody>

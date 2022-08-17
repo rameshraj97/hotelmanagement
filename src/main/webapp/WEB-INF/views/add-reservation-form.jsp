@@ -5,14 +5,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+<%@include file="views1/addreservation.css"%>
+</style>
 <meta charset="ISO-8859-1">
 <title>Add Reservation</title>
 </head>
 <body>
+   
 <h1>Room Reservation</h1>
 	<div id="root">
 		<div id="form">
-			<form:form action="reservationadd" method="post" modelAttribute="addreservation">
+			<form:form action="add" method="post" modelAttribute="addreservation">
 				<div>
 					<label for="guestId">GuestId</label>
 					<div>
@@ -28,18 +32,18 @@
 				  </div>
 				<label for="reservationDate">ReservationDate</label>
 					<div>
-						<form:input type ="date" path ="reservationDate" />
+						<form:input type ="date" path ="reservationDate" required="true" />
 					</div>
 				    <div>
 					<label for="fromDate">FromDate</label>
 					<div>
-						<form:input type ="date" path ="fromDate" />
+						<form:input type ="date" path ="fromDate" required="true"  />
 					</div>
 				</div>
 				<div>
 					<label for="toDate">ToDate</label>
 					<div>
-					<form:input type ="date" path ="toDate" />
+					<form:input type ="date" path ="toDate" required="true"  />
 					</div>
 				</div>
 				<div>
@@ -51,24 +55,29 @@
 					2
 					<form:radiobutton path="noOfPersons" value="${3}" required="true" />
 					3
-					<form:radiobutton path="noOfPersons" value="${4}" required="true"/>
+					<form:radiobutton path="noOfPersons" value="${4}" required="true" />
 					4
-					<form:radiobutton path="noOfPersons" value="${5}" required="true"/>
+					<form:radiobutton path="noOfPersons" value="${5}" required="true" />
 					5
 					</div>
 				</div>
 				<div>
 					<label for="paymentStatus">PaymentStatus</label>
 					<div>
-						<form:radiobutton path="paymentStatus" value="Card"/>Card
-						<form:radiobutton path="paymentStatus" value="Cash"/>Cash
+						<form:radiobutton path="paymentStatus" value="Card" required="true" />Card
+						<form:radiobutton path="paymentStatus" value="Cash" required="true" />Cash
 					</div>
-				</div>
+					</div>
 				<div>
-					<form:button >submit</form:button>
+					<footer>
+					<input type="submit" value="submit"/>
+					<input type="reset" >
+					<button onclick="document.location='/home/guestlogin?roomId=1002'" style="float:left">Back</button>
+				</footer>
 				</div>
 			</form:form>
 		</div>
 	</div>
 </body>
+
 </html>

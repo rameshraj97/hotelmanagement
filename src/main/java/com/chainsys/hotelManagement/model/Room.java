@@ -6,8 +6,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -31,7 +29,8 @@ private int payDayrate;
 
 @Column(name="With_toilet")
 private String withToilet;
-
+@Column(name="image")
+private String image;
 
 
 //public String getAvailabity() {
@@ -41,6 +40,14 @@ private String withToilet;
 //public void setAvailabity(String availabity) {
 //	this.availabity = availabity;
 //}
+
+public String getImage() {
+	return image;
+}
+
+public void setImage(String image) {
+	this.image = image;
+}
 
 @OneToMany(mappedBy = "room",fetch=FetchType.LAZY)
 private List<Reservation> reservationList;

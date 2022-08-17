@@ -13,7 +13,7 @@
 		<div id="form">
 			<form:form action="" method="post" modelAttribute="findemployeebyid">
 				<div>
-					<label for="empId">Emp_id</label>
+					<label for="empId">EmployeeId</label>
 					<div>
 						<form:input path="empId" readonly="true" />
 					</div>
@@ -71,7 +71,7 @@
 								<form:input path="role" readonly="true" />
 							</div>
 							<div>
-								<label for="dateOfjoining">Date_of_joining</label>
+								<label for="dateOfjoining">Date of joining</label>
 								<div>
 									<form:input path="dateOfJoining" readonly="true" />
 								</div>

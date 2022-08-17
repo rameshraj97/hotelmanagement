@@ -14,16 +14,16 @@
    <table border="2" width= "100%" cellpadding="2">
         <thead>
             <tr> 
-               <th>Guest_id</th>
+               <th>GuestId</th>
                <th>Password</th>
-                <th>F_name</th>
-                <th>L_name</th>
-                <th>Phone_no</th>
+                <th>FiratName</th>
+                <th>LastName</th>
+                <th>PhoneNo</th>
                 <th>Address</th>
                 <th>Email</th>
                 <th>Gender</th>
                 <th>Dob</th>
-                <th>Aadhar_number</th>
+                <th>AadharNumber</th>
             </tr>
         </thead>
         <tbody>

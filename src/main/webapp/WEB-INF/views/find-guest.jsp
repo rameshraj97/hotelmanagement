@@ -9,6 +9,7 @@
 <title>find Guest</title>
 </head>
 <body>
+<h1>Guest booked Details</h1>
 	<div id="root">
 		<div id="form">
 			<form:form action="" method="post" modelAttribute="findguestbyid">
@@ -18,55 +19,55 @@
 						<form:input path="password" readonly="true"/>
 					</div>
 				</div>
-				<label for="guestId">Guest_id</label>
+				<label for="guestId">GuestId</label>
 					<div>
 						<form:input path="guestId" readonly="true"/>
 					</div>
 				<div>
-					<label for="firstName">F_name</label>
+					<label for="firstName">FirstName</label>
 					<div>
 						<form:input path="firstName" readonly="true" />
 					</div>
 				</div>
 				<div>
-					<label for="lastName">L_name</label>
+					<label for="lastName">LastName</label>
 					<div>
 						<form:input path="lastName" readonly="true"/>
 					</div>
 				</div>
 				<div>
-					<label for="phoneNo">Num_rooms</label>
+					<label for="phoneNo">PhoneNo</label>
 					<div>
 						<form:input path="phoneNo" readonly="true"/>
 					</div>
 				</div>
 				<div>
-					<label for="address">Phone_no</label>
+					<label for="address">Address</label>
 					<div>
 						<form:input path="address" readonly="true"/>
 					</div>
 				</div>
 				<div>
-					<label for="email">Address</label>
+					<label for="email">Email</label>
 					<div>
 						<form:input path="email" readonly="true"/>
 					</div>
 				</div>
 				<div>
-					<label for="gender">Email</label>
+					<label for="gender">Gender</label>
 					<div>
 						<form:radiobutton path="gender" value="Male"/>Male
 						<form:radiobutton path="gender" value="Female"/>Female
 					</div>
 				</div>
 				<div>
-					<label for=" dob">Gender</label>
+					<label for=" dob">DOB</label>
 					<div>
 						<form:input type ="date" path ="dob" />
 					</div>
 				</div>
 				<div>
-					<label for="aadharNumber">Dob</label>
+					<label for="aadharNumber">AadharNumber</label>
 					<div>
 						<form:input path="aadharNumber" readonly="true"/>
 					</div>

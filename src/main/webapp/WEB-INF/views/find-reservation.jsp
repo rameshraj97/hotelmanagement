@@ -13,56 +13,52 @@
 		<div id="form">
 			<form:form action="" method="post" modelAttribute="findreservationbyid">
 				<div>
-					<label for="reservationNumber">Res_num</label>
+					<label for="reservationNumber">ReservationNumber</label>
 					<div>
 						<form:input path="reservationNumber" readonly="true"/>
 					</div>
 				</div>
 				
 				<div>
-					<label for="guestId">Guest_id</label>
+					<label for="guestId">GuestId</label>
 					<div>
 						<form:input path="guestId" readonly="true" />
 					</div>
 				</div>
 				<div>
-					<label for="hotelId">Hotel_code</label>
-					<div>
-						<form:input path="hotelId" readonly="true"/>
-					</div>
 				</div>
 				<div>
-					<label for="roomId">room_id</label>
+					<label for="roomId">RoomId</label>
 					<div>
 						<form:input path="roomId" readonly="true"/>
 					</div>
 				</div>
 				<div>
-					<label for="reservationDate">Res_date</label>
+					<label for="reservationDate">Reservationdate</label>
 					<div>
 						<form:input path="reservationDate" readonly="true"/>
 					</div>
 				</div>
 				<div>
-					<label for="fromDate">From_date</label>
+					<label for="fromDate">FromDate</label>
 					<div>
 						<form:input path="fromDate" readonly="true"/>
 					</div>
 				</div>
 				<div>
-					<label for="toDate">To_date</label>
+					<label for="toDate">ToDate</label>
 					<div>
 					<form:input path="toDate" readonly="true"/>
 					</div>
 				</div>
 				<div>
-					<label for="noOfPersons">No_of_persons</label>
+					<label for="noOfPersons">No_ofPersons</label>
 					<div>
 					<form:input path="noOfPersons" readonly="true"/>
 					</div>
 				</div>
 				<div>
-					<label for="paymentStatus">Payment_status</label>
+					<label for="paymentStatus">PaymentStatus</label>
 					<div>
 					<form:input path="paymentStatus" readonly="true"/>
 					</div>

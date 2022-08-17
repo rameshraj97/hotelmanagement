@@ -8,10 +8,15 @@
 <meta charset="ISO-8859-1">
 <title>find Bill</title>
 </head>
+<style>
+<%@include file="views1/findbill.css"%>
+</style>
 <body>
+
+<h1> Bill Detalis</h1>
 	<div id="root">
 		<div id="form">
-			<form:form action="" method="post" modelAttribute="bill">
+			<form:form action="bookedDetails" method="post" modelAttribute="findbillbyid">
 				<div>
 					<label for="invoice">Invoice</label>
 					<div>
@@ -20,43 +25,53 @@
 				</div>
 				
 				<div>
-					<label for="guestId">Guest_id</label>
+					<label for="guestId">GuestId</label>
 					<div>
 						<form:input path="guestId" readonly="true" />
 					</div>
 				</div>
 				<div>
-					<label for="roomCharge">Room_charge</label>
+					<label for="roomCharge">RoomCharge</label>
 					<div>
 						<form:input path="roomCharge" readonly="true"/>
 					</div>
 				</div>
 				<div>
-					<label for="invoiceDate">Invoice_date</label>
+					<label for="invoiceDate">Invoicedate</label>
 					<div>
 						<form:input path="invoiceDate" readonly="true"/>
 					</div>
 				</div>
 				<div>
-					<label for="reservationNumber">Res_num</label>
+					<label for="reservationNumber">ReservationNumber</label>
 					<div>
 						<form:input path="reservationNumber" readonly="true"/>
 					</div>
 				</div>
 				<div>
-					<label for="paymentMode">Payment_mode</label>
+					<label for="paymentMode">PaymentMode</label>
 					<div>
 						<form:input path="paymentMode" readonly="true"/>
 					</div>
 				</div>
 				<div>
-					<label for="invoiceStatus">Invoice_status</label>
+					<label for="invoiceStatus">InvoiceStatus</label>
 					<div>
-					<form:input path="invoiceStatus" readonly="true"/>
+					<div>
+					    <form:radiobutton path="invoiceStatus" value="Paid" required="true" />Paid
+						<form:radiobutton path="invoiceStatus" value="NotPaid" required="true" />NotPaid
 					</div>
+					</div>
+				</div>
+				<div>
+					<form:button>confirm</form:button>
 				</div>
 			</form:form>
 		</div>
+		
 	</div>
+	<p>
+	<button onclick="document.location='/home/checkguestlogin'" style="float:left">Back</button>
+	</p>
 </body>
 </html>

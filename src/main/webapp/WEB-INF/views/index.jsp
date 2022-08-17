@@ -1,13 +1,17 @@
-    pageEncoding="ISO-8859-1"%>
+ 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Admin Index Page</title>
 <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
 <style>
+
 body {
+
     background-image:
         url("https://i.pinimg.com/originals/81/1f/23/811f231684b2665921a06a652a3e8f99.jpg");
         background-height: 786px;
@@ -79,19 +83,35 @@ color:black;
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+
 </style>
 </head>
 <body>
-    <h1 align="center">Welcome hotel Management</h1>
-
-    <div class="navbar">
+  
+   <h1 align="center">Welcome hotel Management</h1>
+     <div class="navbar">
         <div class="dropdown">
             <button class="dropbtn">
-                Home <i class="fa fa-caret-down"></i>
+                <i class="fa fa-home"></i>
+              Stays<i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="/home/list">RoomBooking</a> <a></a>  
+                <a href="/home/list">Views</a> <a></a>  
             </div>
            </div>
-</body>
+          <div class="dropdown">
+            <button class="dropbtn">
+              <i class='fas fa-user-alt'></i>
+               Employee<i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+            <ul>
+               <li> <a href="/employee/list">Employeelist</a> </li> 
+                <li> <a href="/room/addform">NewRoomAdd</a></li>
+               <li> <a href="/room/updateform?roomid=">RoomUpdate</a></li>
+               <li> <a href="/room/list">List</a></li>
+            </div>
+           </div> 
+      </body>
 </html>

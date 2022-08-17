@@ -13,14 +13,14 @@
 		<div id="form">
 			<form:form action="" method="post" modelAttribute="findroombyid">
 				<div>
-					<label for="roomId">Room_id</label>
+					<label for="roomId">RoomId</label>
 					<div>
 						<form:input path="roomId" readonly="true"/>
 					</div>
 				</div>
 				
 				<div>
-					<label for="roomType">Room_type</label>
+					<label for="roomType">RoomType</label>
 					<div>
 						<form:input path="roomType" readonly="true" />
 					</div>
@@ -32,24 +32,24 @@
 					</div>
 				</div>
 				<div>
-					<label for="status">status</label>
+					<label for="status">Status</label>
 					<div>
 						<form:input path="status" readonly="true"/>
 					</div>
 				</div>
 				<div>
-					<label for="payDayrate">Pay_dayrate</label>
+					<label for="payDayrate">Payrate</label>
 					<div>
 						<form:input path="payDayrate" readonly="true"/>
 					</div>
 				</div>
 				<div>
-					<label for="withToilet">With_toilet</label>
+					<label for="withToilet">WithToilet</label>
 					<div>
 						<form:input path="withToilet" readonly="true"/>
 					</div>
 				</div>
-				<label for="availabity">Room_id</label>
+				<label for="availabity">Availability</label>
 					<div>
 						<form:input path="availabity" readonly="true"/>
 				<div>

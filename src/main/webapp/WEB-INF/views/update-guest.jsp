@@ -13,69 +13,95 @@
 		<div id="form">
 			<form:form action="updateguest" method="post" modelAttribute="updateguest">
 				<div>
+					<label for="guestId">GuestId</label>
+					<div>
+						<form:input path="guestId"  placeholder="enter User ID"
+                           pattern="[0-9]{4}" title="user ID only contains Numbers"
+                           required="true" />
+					</div>
+				</div>
+				<div>
 					<label for="password">Password</label>
 					<div>
-						<form:input path="password" />
-					</div>
-				</div>
-				<label for="guestId">Guest_id</label>
-					<div>
-						<form:input path="guestId" />
-					</div>
-				<div>
-					<label for="firstName">F_name</label>
-					<div>
-						<form:input path="firstName" />
+						<form:input path="password" cols="50"
+                       rows="6" title="Enter your valid address" required="true" />
 					</div>
 				</div>
 				<div>
-					<label for="lastName">L_name</label>
+					<label for="firstName">FirstName</label>
 					<div>
-						<form:input path="lastName" />
+						<form:input path="firstName" pattern="^[a-z A-Z]+$"
+							title="Please Enter Charactor Only"
+							placeholder="Enter First Name" />
 					</div>
 				</div>
 				<div>
-					<label for="phoneNo">Phone_no</label>
+					<label for="lastName">LastName</label>
 					<div>
-						<form:input path="phoneNo" />
+						<form:input path="lastName" pattern="^[a-z A-Z]+$"
+							title="Please Enter Charactor Only" placeholder="Enter Last Name" />
+					</div>
+				</div>
+
+				<div>
+					<label for="phoneNo">PhoneNo</label>
+					<div>
+						<form:input path="phoneNo" pattern="[0-9]{10}"
+							title="please enter your Ten Digit phone numbers" required="true" />
 					</div>
 				</div>
 				<div>
 					<label for="address">Address</label>
 					<div>
-						<form:input path="address" />
+						<form:input path="address" cols="50"
+                        rows="6" title="Enter your valid address" required="true" />
 					</div>
 				</div>
+
 				<div>
+
 					<label for="email">Email</label>
 					<div>
-						<form:input path="email" />
+						<form:input path="email"
+							pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
+							title="Enter a valid email welcome03@gmail.com"
+							placeholder="Enter a Email" required="true" />
 					</div>
 				</div>
 				<div>
 					<label for="gender">Gender</label>
 					<div>
-						<form:radiobutton path="gender" value="Male"/>Male
-						<form:radiobutton path="gender" value="Female"/>Female
+						<form:radiobutton path="gender" value="Male" required="true" />
+						Male
+
+						<form:radiobutton path="gender" value="Female" required="true"/>
+						Female
 					</div>
 				</div>
 				<div>
 					<label for="dob">Dob</label>
 					<div>
-						<form:input type ="date" path ="dob" />
-					</div>
+						<form:input path="dob" type="date" />
+					</div>	
 				</div>
 				<div>
-					<label for="aadharNumber">Aadhar_number</label>
+					<label for="aadharNumber">AadharNumber</label>
 					<div>
-						<form:input path="aadharNumber" />
+						<form:input path="aadharNumber"
+							pattern="^[1-9]{4}{1}[0-9]{4}{1}[0-9]{4}$"
+							title="aadharNumber(ex: 123456789012)" required="true" />
 					</div>
-				<div>
-					<form:button>Update Guest</form:button>
 				</div>
+				<div>
+				<footer>
+					<input type="submit" value="submit"/>
+					<input type="reset" >
+				</footer>
+				</div>
+				<div></div>
 			</form:form>
 		</div>
 	</div>
-	 <div>${result}</div>
+	<div>${result}</div>
 </body>
 </html>

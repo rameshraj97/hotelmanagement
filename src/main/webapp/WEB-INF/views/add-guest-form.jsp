@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
@@ -7,12 +7,13 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Add Guest</title>
-<style type="text/css">
+<style >
+<%@include file="views1/addguest.css"%>
 </style>
 </head>
 <body>
 	<h1>New Guest Add Detalis</h1>
-	<div id="root" align="center">
+	<div id="root">
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="addguest">
 				<div>
@@ -31,7 +32,7 @@
 					</div>
 				</div>
 				<div>
-					<label for="firstName">Firstname</label>
+					<label for="firstName">FirstName</label>
 					<div>
 						<form:input path="firstName" pattern="^[a-z A-Z]+$"
 							title="Please Enter Charactor Only"
@@ -39,7 +40,7 @@
 					</div>
 				</div>
 				<div>
-					<label for="lastName">Lastname</label>
+					<label for="lastName">LastName</label>
 					<div>
 						<form:input path="lastName" pattern="^[a-z A-Z]+$"
 							title="Please Enter Charactor Only" placeholder="Enter Last Name" />
@@ -85,7 +86,7 @@
 					<label for="dob">Dob</label>
 					<div>
 						<form:input path="dob" type="date" />
-					</div>
+					</div>	
 				</div>
 				<div>
 					<label for="aadharNumber">AadharNumber</label>
@@ -96,12 +97,15 @@
 					</div>
 				</div>
 				<div>
-					<form:button>Submit</form:button>
+				<footer>
+					<input type="submit" value="submit"/>
+					<input type="reset" >
+				</footer>
 				</div>
 				<div></div>
 			</form:form>
 		</div>
 	</div>
-	<div align="center">${result}</div>
+	<div>${result}</div>
 </body>
 </html>

@@ -14,16 +14,16 @@
         <thead>
             <tr> 
                 <th>Emp_id</th>
-                <th>F_name</th>
-                <th>L_name</th>
-                <th>Phone</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>PhoneNo</th>
                 <th>Dob</th>
                 <th>Address</th>
                 <th>Gender</th>
                 <th>Email</th>
                 <th>Qualification</th>
                 <th>Role</th>
-                <th>Date_of_joining</th>
+                <th>Dateofjoining</th>
                 <th>Department</th>
                  <th>Manager</th>
             </tr>

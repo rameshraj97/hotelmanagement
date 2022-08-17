@@ -2,13 +2,10 @@ package com.chainsys.hotelManagement.controller;
 
 import java.util.List;
 
-import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.chainsys.hotelManagement.dto.GuestBillDTO;
 import com.chainsys.hotelManagement.dto.GuestReservationDTO;
-import com.chainsys.hotelManagement.model.Employee;
 import com.chainsys.hotelManagement.model.Guest;
 import com.chainsys.hotelManagement.service.GuestService;
 
@@ -92,7 +88,7 @@ public class GuestController {
 		return "guest-reservation";
 	}
 
-//------------------------
+//------------------------one to many bill
 	@GetMapping("/getbilllist")
 	public String getGuestBill(@RequestParam("id") int id, Model model) {
 		GuestBillDTO dto = guestService.getGuestBill(id);
@@ -100,10 +96,4 @@ public class GuestController {
 		model.addAttribute("billdetails", dto.getBillList());
 		return "guest-bill";
 	}
-
-	
-//	@PostMapping("/room")
-//	public String redirectToRoom(@RequestParam("id")int id,Model model){
-//		model.add
-//	}
 }

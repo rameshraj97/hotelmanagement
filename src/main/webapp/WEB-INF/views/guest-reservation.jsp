@@ -8,30 +8,38 @@
 <meta charset="ISO-8859-1">
 <title>Guest & Reservation list</title>
 </head>
+<style>
+body {
+  background-image: url('https://assets.isu.pub/document-structure/200413202426-1b8d31de75b482060822bd528f5e2883/v1/2db9f30fb3cf2fa7a8010aa8ce6ee235.jpg');
+}
+</style>
 <body>
+
+    
+ <h1 >Guest & Reservation list</h1>
 	<div id="root">
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="getguest">
 				<div>
-					<label for="guestId">Guest_id</label>
+					<label for="guestId">Guestd</label>
 					<div>
 						<form:input path="guestId" />
 					</div>
 				</div>
 				<div>
-					<label for="firstName">F_name</label>
+					<label for="firstName">FirstName</label>
 					<div>
 						<form:input path="firstName" />
 					</div>
 				</div>
 				<div>
-					<label for="lastName">L_name</label>
+					<label for="lastName">LastName</label>
 					<div>
 						<form:input path="lastName" />
 					</div>
 				</div>
 				<div>
-					<label for="phoneNo">Phone_no</label>
+					<label for="phoneNo">PhoneNo</label>
 					<div>
 						<form:input path="phoneNo" />
 					</div>
@@ -61,14 +69,12 @@
 					</div>
 				</div>
 				<div>
-					<label for="aadharNumber">Aadhar_number</label>
+					<label for="aadharNumber">AadharNumber</label>
 					<div>
 						<form:input path="aadharNumber" />
 					</div>
 				</div>
-				<div>
-					<form:button>Add Guest</form:button>
-				</div>
+				
 			</form:form>
 		</div>
 	</div>
@@ -77,34 +83,35 @@
 	<table border="2" width="100%" cellpadding="2">
 		<thead>
 			<tr>
-				<th>Res_num</th>
-				<th>Guest_id</th>
-				<th>Hotel_id</th>
-				<th>Room_id</th>
-				<th>Res_date</th>
-				<th>From_date</th>
-				<th>To_date</th>
-				<th>No_of_persons</th>
-				<th>Payment_status</th>
+				<th>ReservationNumber</th>
+				<th>GuestId</th>
+				<th>RoomId</th>
+				<th>ReservationDate</th>
+				<th>FromDate</th>
+				<th>ToDate</th>
+				<th>No_ofPersons</th>
+				<th>PaymentStatus</th>
+				<th></th>
+				
 				</tr>
 		</thead>
 		<tbody>
-			<c:forEach var="reservation" items="${reservationdetails}">
 				<!-- var-variables,items-collection -->
 				<tr>
-					<td>${reservation.reservationNumber}</td>
-					<td>${reservation.guestId}</td>
-					<td>${reservation.hotelId}</td>
-					<td>${reservation.roomId}</td>
-					<td>${reservation.reservationDate}</td>
-					<td>${reservation.fromDate}</td>
-					<td>${reservation.toDate}</td>
-					<td>${reservation.noOfPersons}</td>
-					<td>${reservation.paymentStatus}</td>
+					<td>${reservationdetails.reservationNumber}</td>
+					<td>${reservationdetails.guestId}</td>
+					<td>${reservationdetails.roomId}</td>
+					<td>${reservationdetails.reservationDate}</td>
+					<td>${reservationdetails.fromDate}</td>
+					<td>${reservationdetails.toDate}</td>
+					<td>${reservationdetails.noOfPersons}</td>
+					<td>${reservationdetails.paymentStatus}</td>
+					
 
 				</tr>
-			</c:forEach>
+				<h2>Thank You Booked</h2> 
 		</tbody>
-	</table>
+
+	
 </body>
 </html>

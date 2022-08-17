@@ -1,0 +1,12 @@
+@charset "ISO-8859-1";
+body
+{
+
+    background-image:
+        url("https://images.template.net/wp-content/uploads/2015/11/25190626/Light-Red-Wallpaper-Background-Download.jpg");
+        background-height: 786px;
+    background-width: 1366px;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
