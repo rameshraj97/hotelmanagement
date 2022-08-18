@@ -12,5 +12,5 @@ public interface BillRepository extends CrudRepository<Bill,Integer>{
     void deleteById(int id);
     List<Bill> findAll();
     List<Bill> findByGuestId(int id);
-    
+    Bill findByReservationNumber(int id);
 }

@@ -10,13 +10,13 @@
 </head>
 <style>
 <%@include file="views1/findbill.css"%>
+text-align ="center";
 </style>
 <body>
-
-<h1> Bill Detalis</h1>
-	<div id="root">
-		<div id="form">
-			<form:form action="bookedDetails" method="post" modelAttribute="findbillbyid">
+<div id="registration-form">
+	<h1> Bill Detalis</h1>
+		<div id="form" class="fieldset">
+			<form:form action="bookedDetails" method="post" modelAttribute="bill">
 				<div>
 					<label for="invoice">Invoice</label>
 					<div>

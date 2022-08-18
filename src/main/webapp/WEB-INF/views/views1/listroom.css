@@ -1,0 +1,29 @@
+@charset "ISO-8859-1";
+body
+{
+
+    background-image:
+        url("https://images.pexels.com/photos/1831234/pexels-photo-1831234.jpeg?cs=srgb&dl=pexels-madison-inouye-1831234.jpg&fm=jpg");
+        background-height: 786px;
+    background-width: 1366px;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+	background-color: rgba(150, 212, 212, 0.4);
+}
+
+th:nth-child(even), td:nth-child(even) {
+	background-color: rgba(150, 212, 212, 0.4);
+}
+
+.img img {
+	width: 10%;
+	height: 15px;
+}

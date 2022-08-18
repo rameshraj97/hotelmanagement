@@ -31,4 +31,11 @@ public class EmployeeService {
 	public void deleteById(int id) {
 		employeeRepositoryRepo.deleteById(id);
 }
+	public Employee getEmpIdAndEmail(int empId, String email) {
+		Employee user =employeeRepositoryRepo.findById(empId);
+        if(!email.equals(user.getEmail())) {
+        	user=null;      
+        }
+           return user;
+       }
 }

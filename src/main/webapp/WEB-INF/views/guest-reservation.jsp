@@ -9,16 +9,13 @@
 <title>Guest & Reservation list</title>
 </head>
 <style>
-body {
-  background-image: url('https://assets.isu.pub/document-structure/200413202426-1b8d31de75b482060822bd528f5e2883/v1/2db9f30fb3cf2fa7a8010aa8ce6ee235.jpg');
-}
+<%@include file="views1/guestreservation.css"%>
+text-align ="center"
 </style>
 <body>
-
-    
- <h1 >Guest & Reservation list</h1>
-	<div id="root">
-		<div id="form">
+<div id="registration-form">
+	<h1 >Guest & Reservation list</h1>
+		<div id="form" class="fieldset">
 			<form:form action="add" method="post" modelAttribute="getguest">
 				<div>
 					<label for="guestId">Guestd</label>

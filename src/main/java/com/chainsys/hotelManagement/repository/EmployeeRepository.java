@@ -12,6 +12,7 @@ public interface EmployeeRepository extends CrudRepository<Employee,Integer>{
  // Used for both adding new Hotel and Modifying new Hotel   
     void deleteById(int id);
     List<Employee> findAll();
+    Employee findByEmail(String email);
     
 }
 

@@ -1,6 +1,13 @@
 @charset "ISO-8859-1";
-body {
-  background-image: url('https://stremmelgallery.com/wp-content/uploads/2020/10/EM2020-12-1.jpg');
+body
+{
+    background-image:
+        url("https://images.template.net/wp-content/uploads/2015/11/25190626/Light-Red-Wallpaper-Background-Download.jpg");
+        background-height: 786px;
+    background-width: 1366px;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
 }
 /* BTW alt-shift will pop a color picker 
   example color: followed  by alt shift will pop it
@@ -154,4 +161,28 @@ margin-top:-5px;
 }
 ::-moz-focus-inner {
   border: 0;
+}
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 60%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #4dffff;
+}
+
+.cancelbtn, .signupbtn {
+  float: right;
+  width: 50%;
 }

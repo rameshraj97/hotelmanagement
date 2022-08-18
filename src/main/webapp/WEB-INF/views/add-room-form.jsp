@@ -10,12 +10,14 @@
 </head>
 
 <style>
-
+<%@include file="views1/updateroom.css"%>
+text-align ="center";
 </style>
 <body>
-	<h1>RoomBooking</h1>
-	<div id="root">
-		<div id="form">
+	
+	<div id="registration-form">
+	  <h1>RoomBooking</h1>
+		<div id="form" class="fieldset">
 			<form:form action="add" method="post" modelAttribute="addroom" object="room" enctype="multipart/form-data" >
 				<div>
 					<label for="roomId">RoomId</label>

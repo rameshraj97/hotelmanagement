@@ -5,12 +5,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
 <title>Add Room</title>
+<meta charset="ISO-8859-1">
+text-align ="center";
+<style><%@include file="views1/updateroom.css"%></style>
 </head>
 <body>
-	<div id="root">
-		<div id="form">
+	<div id="registration-form">
+	 <h1>UpdateRoom</h1>
+		<div id="form" class="fieldset">
 			<form:form action="updateroom" method="post" modelAttribute="updateroom">
 				<div>
 					<label for="roomId">RoomId</label>

@@ -72,15 +72,15 @@ public class HomeController {
 	public String addnewReservation(@ModelAttribute("addreservation")Reservation reservation,Model model)
 	{
 		reservationService.save(reservation);
-		Bill bill=null;
-	    GuestBillDTO dto=guestService.getGuestBill(reservation.getGuestId());
-		List<Bill>billList=dto.getBillList();
-		for(int i=0;i<billList.size();i++) {
-			if(Logic.getInstanceDate().equals(billList.get(i).getInvoiceDate())) {
-				bill=billList.get(i);
-				break;
-			}
-		}
+		Bill bill=billService.getBillByReservationNumber(reservation.getReservationNumber());
+//	    GuestBillDTO dto=guestService.getGuestBill(reservation.getGuestId());
+//		List<Bill>billList=dto.getBillList();
+//		for(int i=0;i<billList.size();i++) {
+//			if(Logic.getInstanceDate().equals(billList.get(i).getInvoiceDate())) {
+//				bill=billList.get(i);
+//				break;
+//			}
+//		}
 		
 		model.addAttribute("bill", bill);
 	  return "find-bill";
@@ -89,12 +89,16 @@ public class HomeController {
 	public String bookedDetails(@ModelAttribute("bill")Bill bill,Model model) {
 		System.out.println(bill.getInvoiceStatus());
 		billService.save(bill);
+		System.out.println(bill);
 		Guest guest=guestService.findById(bill.getGuestId());
+		System.out.println(bill.getReservationNumber());
 		Reservation reservation=reservationService.findById(bill.getReservationNumber());
+		System.out.println(reservation.getReservationNumber());
 		Room room=roomService.findById(reservation.getRoomId());
+		System.out.println(room.getRoomId());
 		room.setStatus("unavailable");
-		System.out.println(room.getStatus());
 		roomService.save(room);
+		System.out.println(room.getStatus());
 		model.addAttribute("getguest", guest);
 		model.addAttribute("reservationdetails", reservation);
 		return "guest-reservation";

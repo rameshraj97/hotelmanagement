@@ -92,13 +92,10 @@ public class RoomController {
 //------------------------------------
 	@GetMapping("/list")
 	public String getAllRoom(Model model) {
-
 		List<Room> roomlist = roomService.getRoom();
-
 		model.addAttribute("allroom", roomlist);
 		return "list-room";
 	}
-
 //-------------------one to many
 	@GetMapping("/getreservationlist")
 	public String getRoomReservation(@RequestParam("id") int id, Model model) {

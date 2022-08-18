@@ -2,20 +2,22 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page import="com.chainsys.hotelManagement.businesslogic.Logic"%>
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="ISO-8859-1">
 <style>
 <%@include file="views1/addreservation.css"%>
+text-align ="center";
 </style>
-<meta charset="ISO-8859-1">
+
 <title>Add Reservation</title>
 </head>
 <body>
-   
-<h1>Room Reservation</h1>
-	<div id="root">
-		<div id="form">
+   <div id="registration-form">
+	<h1>Room Reservation</h1>
+		<div id="form "class="fieidset">
 			<form:form action="add" method="post" modelAttribute="addreservation">
 				<div>
 					<label for="guestId">GuestId</label>
@@ -32,18 +34,18 @@
 				  </div>
 				<label for="reservationDate">ReservationDate</label>
 					<div>
-						<form:input type ="date" path ="reservationDate" required="true" />
+					<form:input type ="date" path ="reservationDate" value="<%=Logic.getSystemDate()%>" />
 					</div>
 				    <div>
 					<label for="fromDate">FromDate</label>
 					<div>
-						<form:input type ="date" path ="fromDate" required="true"  />
+						<form:input type ="date" path ="fromDate" min="<%=Logic.getSystemDate()%>" required="true"  />
 					</div>
 				</div>
 				<div>
 					<label for="toDate">ToDate</label>
 					<div>
-					<form:input type ="date" path ="toDate" required="true"  />
+					<form:input type ="date" path ="toDate" min="<%=Logic.getSystemDate()%>" required="true"  />
 					</div>
 				</div>
 				<div>
@@ -70,8 +72,8 @@
 					</div>
 				<div>
 					<footer>
-					<input type="submit" value="submit"/>
-					<input type="reset" >
+					<input type="submit"  class="signupbtn value="submit"/>
+					<input type="reset"class="cancelbtn" >
 					<button onclick="document.location='/home/guestlogin?roomId=1002'" style="float:left">Back</button>
 				</footer>
 				</div>

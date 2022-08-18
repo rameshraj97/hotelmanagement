@@ -3,6 +3,7 @@ package com.chainsys.hotelManagement.businesslogic;
 import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -36,4 +37,18 @@ public class Logic {
 		}
 		return availableRooList;
 	}
+	
+	public static LocalDate getSystemDate()
+	{
+		LocalDate date=LocalDate.now();
+		return  date;
+	}
+	public static LocalDate getMinAge() {
+        LocalDate date = LocalDate.now();
+        return date.minusYears(18);
+    }
+    public static LocalDate getMaxAge() {
+        LocalDate date = LocalDate.now();
+        return date.minusYears(62);
+    }
 }

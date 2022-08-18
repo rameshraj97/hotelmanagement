@@ -30,5 +30,7 @@ public class BillService {
 	public void deleteById(int id) {
 		billRepositoryRepo.deleteById(id);
 	}
-
+	public Bill getBillByReservationNumber(int id) {
+		return billRepositoryRepo.findByReservationNumber(id);
+	}
 }

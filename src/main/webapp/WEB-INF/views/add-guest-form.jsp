@@ -3,18 +3,19 @@ pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 <head>
 <meta charset="ISO-8859-1">
 <title>Add Guest</title>
 <style >
 <%@include file="views1/addguest.css"%>
+text-align ="center";
 </style>
 </head>
 <body>
-	<h1>New Guest Add Detalis</h1>
-	<div id="root">
-		<div id="form">
+	<div id="registration-form">
+		<h1>New Guest Add Detalis</h1>
+		<div id="form" class="fieldset">
 			<form:form action="add" method="post" modelAttribute="addguest">
 				<div>
 					<label for="guestId">GuestId</label>
@@ -98,8 +99,8 @@ pageEncoding="ISO-8859-1"%>
 				</div>
 				<div>
 				<footer>
-					<input type="submit" value="submit"/>
-					<input type="reset" >
+					<input type="submit" class="signupbtn" value='submit'/>
+					<input type="reset"class="cancelbtn" >
 				</footer>
 				</div>
 				<div></div>

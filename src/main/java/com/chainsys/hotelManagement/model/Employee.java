@@ -20,7 +20,7 @@ private String firstName;
 private String lastName;
 
 @Column(name="Phone")
-private int phone;
+private long phone;
 
 @Column(name="Dob")
 private Date dob;
@@ -73,11 +73,11 @@ public void setLastName(String lastName) {
 	this.lastName = lastName;
 }
 
-public int getPhone() {
+public long getPhone() {
 	return phone;
 }
 
-public void setPhone(int phone) {
+public void setPhone(long phone) {
 	this.phone = phone;
 }
 
