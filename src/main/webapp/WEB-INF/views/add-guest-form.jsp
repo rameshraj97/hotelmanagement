@@ -13,6 +13,7 @@ text-align ="center";
 </style>
 </head>
 <body>
+
 	<div id="registration-form">
 		<h1>New Guest Add Detalis</h1>
 		<div id="form" class="fieldset">
@@ -101,7 +102,7 @@ text-align ="center";
 				<footer>
 					<input type="submit" class="signupbtn" value='submit'/>
 					<input type="reset"class="cancelbtn" >
-				</footer>
+				</footer>   
 				</div>
 				<div></div>
 			</form:form>
