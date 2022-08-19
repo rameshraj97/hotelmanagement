@@ -29,7 +29,7 @@
 		   </tr>
 		</thead>
 		<tbody>
-			<h1 align="center">Room Booking</h1>
+			<h1 style="border:2 width:100%">Room Booking</h1>
 			<c:forEach var="room" items="${allroom}">
 			<tr>
 				   <th scope="col">${room.roomId}</th>
