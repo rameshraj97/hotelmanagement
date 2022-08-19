@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.chainsys.hotelManagement.businesslogic.Logic;
-import com.chainsys.hotelManagement.dto.GuestBillDTO;
 import com.chainsys.hotelManagement.model.Bill;
 import com.chainsys.hotelManagement.model.Guest;
 import com.chainsys.hotelManagement.model.Login;

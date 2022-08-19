@@ -3,7 +3,6 @@ package com.chainsys.hotelManagement.dto;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.chainsys.hotelManagement.model.Guest;
 import com.chainsys.hotelManagement.model.Reservation;
 import com.chainsys.hotelManagement.model.Room;
 

@@ -3,7 +3,6 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.chainsys.hotelManagement.model.Employee;
 import com.chainsys.hotelManagement.model.Guest;
 
 public interface GuestRepository extends CrudRepository<Guest,Integer>{

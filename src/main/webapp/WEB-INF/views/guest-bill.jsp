@@ -74,21 +74,21 @@
 	</div>
 	<body>
     <div id="Table root"></div>
-    <table border="2" width= "100%" cellpadding="2">
+ <table style="border:2 width:100%"><caption></caption>
         <thead>
             <tr> 
-                <th>Invoice</th>
-                <th>GuestId</th>
-                <th>RoomCharge</th>
-                <th>InvoiceDate</th>
-                <th>ReservationNumber</th>
-                <th>PaymentMode</th>
-                <th>InvoiceStatus</th>
+                <th scope="col">Invoice</th>
+                <th scope="col">GuestId</th>
+                <th scope="col">RoomCharge</th>
+                <th scope="col">InvoiceDate</th>
+                <th scope="col">ReservationNumber</th>
+                <th scope="col">PaymentMode</th>
+                <th scope="col">InvoiceStatus</th>
             </tr>
         </thead>
         <tbody>
             <c:forEach var="bill" items="${billdetails}">
-                <!-- var-variables,items-collection -->
+                
                 <tr>
                     <td>${bill.invoice}</td>
                     <td>${bill.guestId}</td>

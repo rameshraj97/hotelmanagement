@@ -6,9 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.chainsys.hotelManagement.dto.GuestReservationDTO;
 import com.chainsys.hotelManagement.dto.RoomReservationDTO;
-import com.chainsys.hotelManagement.model.Guest;
 import com.chainsys.hotelManagement.model.Reservation;
 import com.chainsys.hotelManagement.model.Room;
 import com.chainsys.hotelManagement.repository.ReservationRepository;
