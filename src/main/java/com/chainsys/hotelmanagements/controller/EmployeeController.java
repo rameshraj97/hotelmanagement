@@ -73,7 +73,7 @@ public class EmployeeController {
 	}
 
 	@GetMapping("/login")
-	public String Employeeform(Model model) {
+	public String employeeform(Model model) {
 		Employee theemp = new Employee();
 		model.addAttribute("employee", theemp);
 		return "Employeelogin";

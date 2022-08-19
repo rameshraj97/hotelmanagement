@@ -77,19 +77,13 @@ public class HomeController {
 	}
 	@PostMapping("/bookedDetails")
 	public String bookedDetails(@ModelAttribute("bill")Bill bill,Model model) {
-		System.out.println(bill.getInvoiceStatus());
-		billService.save(bill);
-		System.out.println(bill);
-		Guest guest=guestService.findById(bill.getGuestId());
-		System.out.println(bill.getReservationNumber());
-		Reservation reservation=reservationService.findById(bill.getReservationNumber());
-		System.out.println(reservation.getReservationNumber());
-		Room room=roomService.findById(reservation.getRoomId());
-		System.out.println(room.getRoomId());
-		room.setStatus("unavailable");
+	    billService.save(bill);
+        Guest guest=guestService.findById(bill.getGuestId());
+	    Reservation reservation=reservationService.findById(bill.getReservationNumber());
+        Room room=roomService.findById(reservation.getRoomId());
+        room.setStatus("unavailable");
 		roomService.save(room);
-		System.out.println(room.getStatus());
-		model.addAttribute("getguest", guest);
+	    model.addAttribute("getguest", guest);
 		model.addAttribute("reservationdetails", reservation);
 		return "guest-reservation";
 	}

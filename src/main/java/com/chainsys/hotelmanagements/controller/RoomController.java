@@ -29,7 +29,7 @@ public class RoomController {
 	public static String uploadDir = System.getProperty("user.dir") + "/src/main/resources/Images";
 
 	@GetMapping("/addform")
-	public String RoomAddFrom(Model model) {
+	public String roomAddFrom(Model model) {
 		Room room = new Room();
 		model.addAttribute("addroom", room);
 		return "add-room-form";
