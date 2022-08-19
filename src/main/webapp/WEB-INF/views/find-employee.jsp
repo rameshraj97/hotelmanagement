@@ -3,7 +3,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>find Employee</title>
@@ -60,30 +60,36 @@
 					<div>
 						<form:input path="email" readonly="true" />
 					</div>
+					</div>
 					<div>
 						<label for="qualification">Qualification</label>
 						<div>
 							<form:input path="qualification" readonly="true" />
+						</div>
 						</div>
 						<div>
 							<label for="role">Role</label>
 							<div>
 								<form:input path="role" readonly="true" />
 							</div>
+							</div>
 							<div>
 								<label for="dateOfjoining">Date of joining</label>
 								<div>
 									<form:input path="dateOfJoining" readonly="true" />
+								</div>
 								</div>
 								<div>
 									<label for="department">Department</label>
 									<div>
 										<form:input path="department" readonly="true" />
 									</div>
+									</div>
 									<div>
 										<label for="manager">Manager</label>
 										<div>
 								<form:input path="manager" readonly="true" />
+							</div>
 							</div>
 			      </form:form>
 		   </div>

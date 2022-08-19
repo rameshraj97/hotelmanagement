@@ -3,14 +3,14 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>Add Room</title>
 <meta charset="ISO-8859-1">
-text-align ="center";
 <style><%@include file="views1/updateroom.css"%></style>
 </head>
 <body>
+ text-align ="center";
 	<div id="registration-form">
 	 <h1>UpdateRoom</h1>
 		<div id="form" class="fieldset">
@@ -23,6 +23,7 @@ text-align ="center";
                            required="true"  />
 					</div>
 				</div>
+				
 				<div>
 					<label for="roomType">RoomType</label>
 					<div>
@@ -31,6 +32,7 @@ text-align ="center";
                       <option value="TwinRoom">TwinRoom</option>
                       <option value="Penthouse">Penthouse</option>
                     </select>
+                     </div>
                      </div>
 				<div>
 					<label for="capacity">Capacity</label>
@@ -44,6 +46,7 @@ text-align ="center";
                       <option value="King">King</option>
                       <option value="Twin">Twin</option>
                     </select>
+				</div>
 				</div>
 				<div>
 					<label for="status">Status</label>

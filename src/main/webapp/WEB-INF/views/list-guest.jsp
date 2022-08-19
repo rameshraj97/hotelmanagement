@@ -3,27 +3,31 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>Guest List</title>
+<style >
+<%@include file="views1/listguest.css"%>
+</style>
 </head>
 <body>
+<table id="alter" class="center"><caption></caption><th></th>
 <h1 align="center">Guest Details</h1>
     <div id="Table root"></div>
-   <table border="2" width= "100%" cellpadding="2">
+   <table style="border:2 width:100%"><caption></caption>
         <thead>
             <tr> 
-               <th>GuestId</th>
-               <th>Password</th>
-                <th>FiratName</th>
-                <th>LastName</th>
-                <th>PhoneNo</th>
-                <th>Address</th>
-                <th>Email</th>
-                <th>Gender</th>
-                <th>Dob</th>
-                <th>AadharNumber</th>
+               <th scope="col">GuestId</th>
+               <th scope="col">Password</th>
+                <th scope="col">FiratName</th>
+                <th scope="col">LastName</th>
+                <th scope="col">PhoneNo</th>
+                <th scope="col">Address</th>
+                <th scope="col">Email</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Dob</th>
+                <th scope="col">AadharNumber</th>
             </tr>
         </thead>
         <tbody>
@@ -44,6 +48,7 @@
                 </tr>
             </c:forEach>
         </tbody>
+    </table>
     </table>
 </body>
 </html>

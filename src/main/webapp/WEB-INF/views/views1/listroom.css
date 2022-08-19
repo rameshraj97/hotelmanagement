@@ -27,3 +27,8 @@ th:nth-child(even), td:nth-child(even) {
 	width: 10%;
 	height: 15px;
 }
+.btn{
+         background-color: #f44336 ;
+     color:white;
+     border: 2px solid black;
+}

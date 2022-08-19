@@ -3,10 +3,10 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
-<title>Guest & Reservation list</title>
+<title>Guest Reservation list</title>
 </head>
 <style>
 <%@include file="views1/guestreservation.css"%>
@@ -14,7 +14,7 @@ text-align ="center"
 </style>
 <body>
 <div id="registration-form">
-	<h1 >Guest & Reservation list</h1>
+	<h1 >Guest Reservation list</h1>
 		<div id="form" class="fieldset">
 			<form:form action="add" method="post" modelAttribute="getguest">
 				<div>

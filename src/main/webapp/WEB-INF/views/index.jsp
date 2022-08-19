@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>index</title>
@@ -16,11 +16,12 @@
 </style>
 </head>
 <body>
-    <div class="navbar">
+  
+       <div class="navbar">
         <div class="dropdown">
-          <i class="fa fa-home"></i>
+          <em class="fa fa-home"></em>
             <button class="dropbtn">
-                Stay <i class="fa fa-caret-down"></i>
+                Stay <em class="fa fa-caret-down"></em>
             </button>
             <div class="dropdown-content">
                 <a href="/home/list">Views</a> 
@@ -28,18 +29,19 @@
         </div>
 
         <div class="dropdown">
-            <button class="dropbtn">
-            <i class='fas fa-user-tie'></i>
-                Employees <i class="fa fa-caret-down"></i>
+            <div class="dropbtn">
+            <em class='fas fa-user-tie'></em>
+            <button>
+                Employees <em class="fa fa-caret-down"></em>
             </button>
                 <div class="dropdown-content">
-                <a href="/employee/login">RoomList</a> </div>
-                <a href="/employee/list">EmployeeList</a> </div>
-        </div>
-        </div>
-        
-        <h1 align="center">Welcome Hotel Management</h1><br>
-     <h2 align="center"> ITC Grand chola, chennai</h2>
-
-</body>
+                <a href="/employee/login">RoomList</a> 
+                <a href="/employee/list">EmployeeList</a> 
+                </div>
+                </div>
+                </div>
+           </div>
+               <h1>Welcome Hotel Management</h1><br> 
+               <h2> ITC Grand chola Chennai</h2>      
+   </body>
 </html>	

@@ -70,7 +70,7 @@
 	          </div>
 			</form:form>
 		</div>
-		<td><div>${result}</div></td>
+		<div>${result}</div>
 	</div>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
@@ -54,7 +54,7 @@
 		</div>
 	</div>
 	<div id="Table root"></div>
-	<table border="2" width="100%" cellpadding="2">
+	<table style="border:2 width:100%"><caption></caption>
 		<thead>
 			<tr>
 				<th>ReservationNumber</th>

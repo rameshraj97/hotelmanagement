@@ -4,7 +4,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page import="com.chainsys.hotelManagement.businesslogic.Logic"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <style>
@@ -72,8 +72,8 @@ text-align ="center";
 					</div>
 				<div>
 					<footer>
-					<input type="submit"  class="signupbtn value="submit"/>
-					<input type="reset"class="cancelbtn" >
+					<button type="submit"  class="signupbtn" >Submit</button>
+					<button type="reset" class="cancelbtn" >Reset</button>
 					<button onclick="document.location='/home/guestlogin?roomId=1002'" style="float:left">Back</button>
 				</footer>
 				</div>

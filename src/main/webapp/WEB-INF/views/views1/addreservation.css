@@ -172,7 +172,7 @@ button:hover {
 
 .cancelbtn {
   padding: 14px 20px;
-  background-color: #4dffff;
+  background-color:red;
 }
 
 .cancelbtn, .signupbtn {

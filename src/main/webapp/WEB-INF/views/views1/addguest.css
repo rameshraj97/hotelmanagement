@@ -1,4 +1,4 @@
-@charset "ISO-8859-1";
+	@charset "ISO-8859-1";
 body
 {
 
@@ -185,5 +185,5 @@ button:hover {
 
 .cancelbtn, .signupbtn {
   float: right;
-  width: 50%;
+  width: 100%;
 }

@@ -3,9 +3,9 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
-<head>
-<script src='https://kit.fontawesome.com/a076d05399.js' ='anonymous'></script>
+<html lang="en">
+<head><title></title>
+<script src='https://kit.fontawesome.com/a076d05399.js'= 'anonymous'></script>
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
@@ -22,41 +22,36 @@
 <p>
   <button onclick="document.location= '/'" style="float:left">Back</button>
     </p>
-	<table border="2" width="100%" cellpadding="2">
-		<thead>
+	<table style="border:2 width=100%" ><caption></caption>
+	<thead>
 			<tr>
-				<th>RoomNo</th>
-				<th>RoomType</th>
-
-			</tr>
+				<th scope="col">RoomNo</th>
+		   </tr>
 		</thead>
 		<tbody>
 			<h1 align="center">Room Booking</h1>
 			<c:forEach var="room" items="${allroom}">
-				<!-- var-variables,items-collection -->
-				<tr>
-				
-					<th>${room.roomId}</th>
+			<tr>
+				   <th scope="col">${room.roomId}</th>
 					 <td><td><img
                         src="file://C:\Users\rame3119\eclipse-workspace\hotelManagement\src\main\resources\Images/${room.image}"
-                            width="100" height="100"></td>
-					<th>${room.roomType}<br> 
+                        alt="image"  width="100" height="100"></td>
+					<th scope="col">${room.roomType}<br> 
 			            ${room.capacity}<br>
 						${room.status}<br>
-						<i class="fa fa-rupee" style="font-size:36px"></i>${room.payDayrate}
+						<em class="fa fa-rupee" style="font-size:36px"></em>${room.payDayrate}
 						${room.withToilet}
-						<i class='fab fa-cc-visa' style='font-size:36px'></i>
-						<i class='fas fa-coffee' style='font-size:36px'> 
-						<i class='fas fa-rss' style='font-size:48px;color:red'>
-						<i class='fas fa-phone-volume' style='font-size:48px;color:red'>
-						<i class="fa fa-television" style="font-size:36px"></i>
+						<em class='fab fa-cc-visa' style='font-size:36px'></em>
+						<em class='fas fa-coffee' style='font-size:36px'> </em>
+						<em class='fas fa-rss' style='font-size:48px;color:red'></em>
+						<em class='fas fa-phone-volume' style='font-size:48px;color:red'></em>
+						<em class="fa fa-television" style="font-size:36px"></em>
 						 
                          
 					</th>
 				
-					<th><a href="guestlogin?roomId=${room.roomId}"><button>Booknow</button></a>
-                    
-                   </th>
+					<th scope="col"><a href="guestlogin?roomId=${room.roomId}"><button class ="btn" >Booknow</button></a>
+                </th>
 				</tr>
 			</c:forEach>
 		</tbody>
