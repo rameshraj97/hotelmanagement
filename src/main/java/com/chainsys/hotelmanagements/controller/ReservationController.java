@@ -18,10 +18,12 @@ import com.chainsys.hotelmanagements.service.ReservationService;
 @RequestMapping("/reservation")
 public class ReservationController {
 @Autowired
+
+public static final String RESERVATIONLIST = "redirect:/reservation/list";
 private ReservationService reservationService ;
 
 @GetMapping("/addform")
-public String ReservationAddForm(Model model)
+public String reservationAddForm(Model model)
 {
     Reservation reservation = new  Reservation();
     model.addAttribute("addreservation",reservation);

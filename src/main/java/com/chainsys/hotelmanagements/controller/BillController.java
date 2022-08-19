@@ -20,9 +20,11 @@ import com.chainsys.hotelmanagements.service.BillService;
 public class BillController {
 	@Autowired
 	private BillService billService;
- 
+	
+	public static final String LISTBILL = "redirect:/bill/list";
+	
 	@GetMapping("/addform")
-	public String BillAddForm(Model model)
+	public String billAddForm(Model model)
 	{
 	    Bill bill = new Bill();
 	    model.addAttribute("addbill",bill);
@@ -48,13 +50,13 @@ public class BillController {
 	@PostMapping("/updatebill")
 	public String updateBill(@ModelAttribute("updatebill") Bill bill) {
 		billService.save(bill);
-	    return "redirect:/bill/list";
+	    return LISTBILL;
 	}
 
 	@GetMapping("/deletehotel")
 	public String deleteBill(@RequestParam("billid") int id) {
 		billService.deleteById(id);
-	    return "redirect:/bill/list";
+	    return LISTBILL;
 	}
 	
 	@GetMapping("/findbyid")

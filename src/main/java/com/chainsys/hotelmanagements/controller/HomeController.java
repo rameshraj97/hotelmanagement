@@ -52,13 +52,12 @@ public class HomeController {
 	}
 	@PostMapping("/checkguestlogin")
 	public String checkingGuestAccess(@ModelAttribute("login") Login login,Model model) {
-		     System.out.println(login.getRoomId());
+		     
 		Guest guestuser = guestService.getGuestEmailAndPassword(login.getEmail(), login.getPassword());
 		if (guestuser != null) {
 			Reservation reservation = new  Reservation();
 			model.addAttribute("roomId", login.getRoomId());
-		    System.out.println(login.getRoomId());
-			model.addAttribute("guestId", guestuser.getGuestId());
+		    model.addAttribute("guestId", guestuser.getGuestId());
 		    model.addAttribute("addreservation",reservation);
 		    return"add-reservation-form";
 		    

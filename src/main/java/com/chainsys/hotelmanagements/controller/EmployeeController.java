@@ -19,9 +19,9 @@ import com.chainsys.hotelmanagements.service.EmployeeService;
 public class EmployeeController {
 	@Autowired
 	private EmployeeService employeeService;
-
+	public static final String EMPLOYEELIST = "redirect:/employee/list";
 	@GetMapping("/addform")
-	public String EmployeeAddForm(Model model) {
+	public String employeeAddForm(Model model) {
 		Employee employee = new Employee();
 		model.addAttribute("addemployee", employee);
 		return "add-employee-form";
