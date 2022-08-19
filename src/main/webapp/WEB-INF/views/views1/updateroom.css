@@ -3,22 +3,13 @@ body
 {
     background-image:
         url("https://images.template.net/wp-content/uploads/2015/11/25190626/Light-Red-Wallpaper-Background-Download.jpg");
-        background-height: 786px;
+    background-height: 786px;
     background-width: 1366px;
     background-attachment: fixed;
     background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
 }
-/* BTW alt-shift will pop a color picker 
-  example color: followed  by alt shift will pop it
-*/
-/*
-Hide the label if placeholder is supported
-*/
 
-/* body{
-  background:#b4b4b4;
-} */
 
 #registration-form {
   font-family:'Open Sans Condensed', sans-serif;

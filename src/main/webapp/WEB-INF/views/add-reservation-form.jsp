@@ -2,7 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page import="com.chainsys.hotelManagement.businesslogic.Logic"%>
+<%@ page import="com.chainsys.hotelmanagements.businesslogics.Logic"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
