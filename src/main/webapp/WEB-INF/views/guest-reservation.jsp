@@ -77,7 +77,7 @@ text-align ="center"
 	</div>
 	
 	<div id="Table root"></div>
-	<table border="2" width="100%" cellpadding="2">
+	  <table style="border:2 width:100%"><caption></caption>
 		<thead>
 			<tr>
 				<th>ReservationNumber</th>
@@ -106,9 +106,11 @@ text-align ="center"
 					
 
 				</tr>
-				<h2>Thank You Booked</h2> 
-		</tbody>
-
-	
+				<h2>Thank You Booked</h2>
+				 
+	</tbody>
+	<div class="header log-out">
+        <a href="/">Log Out</a>
+      </div>
 </body>
 </html>

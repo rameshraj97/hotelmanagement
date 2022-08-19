@@ -42,10 +42,10 @@ public class Guest {
 		this.password = password;
 	}
 
-	// ------ step1 connection one to many
+
 
 	@OneToMany(mappedBy = "guest", fetch = FetchType.LAZY)
-	// -------step2 create the reservation object
+
 	private List<Reservation> reservationList;
 
 	public List<Reservation> getReservationList() {
@@ -56,7 +56,7 @@ public class Guest {
 		this.reservationList = reservationList;
 	}
 
-	// -------------------------------------
+	
 	@OneToMany(mappedBy = "guest", fetch = FetchType.LAZY)
 	private List<Bill> billList;
 
@@ -76,7 +76,7 @@ public class Guest {
 		this.guestId = guestId;
 	}
 
-	// --------------------
+	
 	public String getFirstName() {
 		return firstName;
 	}

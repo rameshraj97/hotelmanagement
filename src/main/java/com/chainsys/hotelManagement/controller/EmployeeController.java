@@ -27,14 +27,14 @@ public class EmployeeController {
 		return "add-employee-form";
 	}
 
-//--------------------------------------------------
+
 	@PostMapping("/add")
 	public String addnewEmployee(@ModelAttribute("addemployee") Employee employee) {
 		employeeService.save(employee);
 		return "redirect:/employee/list";
 	}
 
-//---------------------------------------------
+
 	@GetMapping("/updateform")
 	public String showUpdateForm(@RequestParam("employeeid") int id, Model model) {
 		Employee employee = employeeService.findById(id);
@@ -42,21 +42,21 @@ public class EmployeeController {
 		return "update-employee";
 	}
 
-//-----------------------------------------
+
 	@PostMapping("/updateemployee")
 	public String updateEmployee(@ModelAttribute("updateemployee") Employee employee) {
 		employeeService.save(employee);
 		return "redirect:/employee/list";
 	}
 
-//-----------------------------------------------------
+
 	@GetMapping("/deleteemployee")
 	public String deleteEmployee(@RequestParam("employeeid") int id) {
 		employeeService.deleteById(id);
 		return "redirect:/employee/list";
 	}
 
-//-------------------------------------------------
+
 	@GetMapping("/findbyid")
 	public String findEmployeeById(@RequestParam("id") int id, Model model) {
 		Employee employee = employeeService.findById(id);
@@ -64,7 +64,7 @@ public class EmployeeController {
 		return "find-employee";
 	}
 
-//----------------------------------------------------------
+
 	@GetMapping("/list")
 	public String getAllEmployee(Model model) {
 		List<Employee> employeelist = employeeService.getEmployee();

@@ -73,15 +73,7 @@ public class HomeController {
 	{
 		reservationService.save(reservation);
 		Bill bill=billService.getBillByReservationNumber(reservation.getReservationNumber());
-//	    GuestBillDTO dto=guestService.getGuestBill(reservation.getGuestId());
-//		List<Bill>billList=dto.getBillList();
-//		for(int i=0;i<billList.size();i++) {
-//			if(Logic.getInstanceDate().equals(billList.get(i).getInvoiceDate())) {
-//				bill=billList.get(i);
-//				break;
-//			}
-//		}
-		
+
 		model.addAttribute("bill", bill);
 	  return "find-bill";
 	}

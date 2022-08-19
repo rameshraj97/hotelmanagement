@@ -23,20 +23,19 @@ public class RoomService {
 	private ReservationRepository reservationRepository;
 	
 	public List<Room> getRoom() {
-		List<Room> listroom = roomRepositoryRepo.findAll();
-		return listroom;
+		return roomRepositoryRepo.findAll();
 
 	}
-//------------------------------------
+
 	public Room save(Room room) {
 
 		return roomRepositoryRepo.save(room);
 	}
-//-------------------------------------
+
 	public Room findById(int id) {
 		return roomRepositoryRepo.findById(id);
 	}
-//-------------------------------------
+
 	public void deleteById(int id) {
 		roomRepositoryRepo.deleteById(id);
 	}
@@ -48,7 +47,7 @@ public class RoomService {
         List<Reservation> reservationList = reservationRepository.findByRoomId(id);
         Iterator<Reservation> iterator = reservationList.iterator();
         while(iterator.hasNext()) {
-            roomReservationdto.addReservation((Reservation)iterator.next());
+            roomReservationdto.addReservation(iterator.next());
         }
         return roomReservationdto;
     }

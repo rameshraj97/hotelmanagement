@@ -1,7 +1,5 @@
 package com.chainsys.hotelManagement.model;
 
-
-
 import java.sql.Date;
 
 import javax.persistence.Column;
@@ -53,7 +51,6 @@ public void setInvoiceDate(Date invoiceDate) {
 }
 
 
-//----------------Bill
 @ManyToOne(fetch =FetchType.LAZY)
 @JoinColumn(name="Guest_id",nullable=false,insertable = false, updatable=false) 
 private Guest guest;
@@ -65,7 +62,6 @@ public Guest getGuest() {
 public void setGuest(Guest guest) {
 	this.guest = guest;
 }
-//---------------------
 public int getInvoice() {
 	return invoice;
 }

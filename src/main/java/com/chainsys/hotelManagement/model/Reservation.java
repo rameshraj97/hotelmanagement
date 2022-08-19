@@ -44,7 +44,7 @@ public class Reservation {
 	private String paymentStatus;
 	
 	
-	//-------------Guest
+	
 	@ManyToOne(fetch= FetchType.LAZY)
 	@JoinColumn(name="Guest_id",nullable =false,insertable = false, updatable=false)
 	private Guest guest;
@@ -57,21 +57,7 @@ public class Reservation {
 		this.guest = guest;
 	}
 
-	/*
-	 * //---------------Hotel
-	 * 
-	 * @ManyToOne(fetch= FetchType.LAZY)
-	 * 
-	 * @JoinColumn(name="Hotel_id",nullable =false,insertable = false,
-	 * updatable=false) private Hotel hotel;
-	 */
-	/*
-	 * public Hotel getHotel() { return hotel; }
-	 * 
-	 * public void setHotel(Hotel hotel) { this.hotel = hotel; }
-	 */
-
-	//---------------Room
+	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="Room_id",nullable =false,insertable = false, updatable=false)
 	private Room room;
@@ -83,7 +69,7 @@ public class Reservation {
 	public void setRoom(Room room) {
 		this.room = room;
 	}
-  //---------------------------
+  
 	public int getReservationNumber() {
 		return reservationNumber;
 	}
@@ -100,11 +86,7 @@ public class Reservation {
 		this.guestId = guestId;
 	}
 
-	/*
-	 * public int getHotelId() { return hotelId; }
-	 * 
-	 * public void setHotelId(int hotelId) { this.hotelId = hotelId; }
-	 */
+	
 
 	public int getRoomId() {
 		return roomId;

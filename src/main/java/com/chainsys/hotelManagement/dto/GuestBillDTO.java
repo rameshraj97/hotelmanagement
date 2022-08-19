@@ -9,7 +9,7 @@ import com.chainsys.hotelManagement.model.Guest;
 public class GuestBillDTO {
 	private Guest guest;
 
-	private List<Bill> billList=new ArrayList<Bill>();
+	private List<Bill> billList=new ArrayList<>();
 	public Guest getGuest() {
 		return guest;
 	}

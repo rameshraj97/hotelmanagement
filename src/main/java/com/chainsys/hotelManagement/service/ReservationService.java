@@ -1,6 +1,5 @@
 package com.chainsys.hotelManagement.service;
 
-import java.util.Calendar;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,10 +20,9 @@ import com.chainsys.hotelManagement.repository.ReservationRepository;
 	@Autowired
 	private BillService billService;
 	public List<Reservation> getReservation() {
-		List<Reservation> listreservation =reservationRepositoryRepo.findAll();
-		return listreservation;
+		return reservationRepositoryRepo.findAll();
 	}
- //--------------------------------------------
+ 
 	public Reservation save(Reservation reservation) {
 		reservation=reservationRepositoryRepo.save(reservation);
 		Bill bill=new Bill();
@@ -37,11 +35,11 @@ import com.chainsys.hotelManagement.repository.ReservationRepository;
 		billService.save(bill);
 		return reservation;
 	}
-  //-------------------------------------------    
+      
 	public Reservation findById(int id) {
 		return reservationRepositoryRepo.findById(id);
 	}
-//--------------------------------------------
+
 	public void deleteById(int id) {
 		reservationRepositoryRepo.deleteById(id);
 	}

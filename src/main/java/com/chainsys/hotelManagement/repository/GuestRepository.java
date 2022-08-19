@@ -9,7 +9,7 @@ import com.chainsys.hotelManagement.model.Guest;
 public interface GuestRepository extends CrudRepository<Guest,Integer>{
     Guest findById(int id);
     Guest save(Guest gt);
- // Used for both adding new Hotel and Modifying new Hotel   
+  
     void deleteById(int id);
     List<Guest> findAll();
     Guest findByEmailAndPassword(String email, String string);

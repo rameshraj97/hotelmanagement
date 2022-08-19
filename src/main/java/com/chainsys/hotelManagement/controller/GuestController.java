@@ -31,7 +31,6 @@ public class GuestController {
 		return "add-guest-form";
 	}
 
-//-----------------------------addform-----------------------------------
 	@PostMapping("/add")
 	public String addnewguest(@ModelAttribute("addguest") Guest guest, Model model  ) 
 		 {
@@ -40,7 +39,7 @@ public class GuestController {
 		return "redirect:/home/list";
 	}
 
-//---------------------------------------
+
 	@GetMapping("/updateform")
 	public String showUpdateForm(@RequestParam("guestid") int id, Model model) {
 		Guest guest = guestService.findById(id);
@@ -48,7 +47,7 @@ public class GuestController {
 		return "update-guest";
 	}
 
-//------------------------------------------
+
 	@PostMapping("/updateguest")
 	public String updateguest(@ModelAttribute("updateguest") Guest guest, Model model) {
 		guestService.save(guest);
@@ -56,14 +55,14 @@ public class GuestController {
 		return "update-guest";
 	}
 
-//------------------------------------
+
 	@GetMapping("/deleteguest")
 	public String deleteguest(@RequestParam("guestid") int id) {
 		guestService.deleteById(id);
 		return "redirect:/guest/list";
 	}
 
-//---------------------------------------------
+
 	@GetMapping("/findbyid")
 	public String findGuestById(@RequestParam("id") int id, Model model) {
 		Guest guest = guestService.findById(id);
@@ -71,7 +70,7 @@ public class GuestController {
 		return "find-guest";
 	}
 
-//--------------------------------
+
 	@GetMapping("/list")
 	public String getAllGuest(Model model) {
 		List<Guest> guestlist = guestService.getGuest();
@@ -79,7 +78,7 @@ public class GuestController {
 		return "list-guest";
 	}
 
-//---one to many guest 
+ 
 	@GetMapping("/getreservationlist")
 	public String getGuestReservation(@RequestParam("id") int id, Model model) {
 		GuestReservationDTO dto = guestService.getGuestReservation(id);
@@ -88,7 +87,6 @@ public class GuestController {
 		return "guest-reservation";
 	}
 
-//------------------------one to many bill
 	@GetMapping("/getbilllist")
 	public String getGuestBill(@RequestParam("id") int id, Model model) {
 		GuestBillDTO dto = guestService.getGuestBill(id);

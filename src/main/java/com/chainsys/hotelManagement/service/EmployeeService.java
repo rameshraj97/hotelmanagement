@@ -15,18 +15,16 @@ public class EmployeeService {
 
 	
 	public List<Employee> getEmployee() {
-		List<Employee> listemployee =employeeRepositoryRepo.findAll();
-		return listemployee;
+		return employeeRepositoryRepo.findAll();
 	}
-//--------------------------------------
+
 	public Employee save(Employee employee) {
 		
       return employeeRepositoryRepo.save(employee);
 	}
-//------------------------------------
 	public Employee findById(int id) {
 		return employeeRepositoryRepo.findById(id);
-//-----------------------------------
+
 }
 	public void deleteById(int id) {
 		employeeRepositoryRepo.deleteById(id);

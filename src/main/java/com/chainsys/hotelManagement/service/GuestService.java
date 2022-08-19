@@ -31,18 +31,18 @@ public class GuestService {
 		return guestRepositoryRepo.findAll();
 	}
 
-	// -------------------------------------------
+	
 	public Guest save(Guest guest) {
 
 		return guestRepositoryRepo.save(guest);
 	}
 
-	// -----------------------------------------
+	
 	public Guest findById(int id) {
 		return guestRepositoryRepo.findById(id);
 	}
 
-	// -------------------------------------------
+	
 	public void deleteById(int id) {
 		guestRepositoryRepo.deleteById(id);
 	}
@@ -54,12 +54,12 @@ public class GuestService {
 		List<Reservation> reservationList = reservationRepository.findByGuestId(id);
 		Iterator<Reservation> iterator = reservationList.iterator();
 		while (iterator.hasNext()) {
-			guestReservationdto.addReservation((Reservation) iterator.next());
+			guestReservationdto.addReservation(iterator.next());
 		}
 		return guestReservationdto;
 	}
 
-//---------------------------
+
 	public GuestBillDTO getGuestBill(int id) {
 		Guest guest = findById(id);
 		GuestBillDTO guestBilldto = new GuestBillDTO();
@@ -67,7 +67,7 @@ public class GuestService {
 		List<Bill> billList = billRepository.findByGuestId(id);
 		Iterator<Bill> iterator = billList.iterator();
 		while (iterator.hasNext()) {
-			guestBilldto.addBill((Bill) iterator.next());
+			guestBilldto.addBill(iterator.next());
 		}
 		return guestBilldto;
 	}

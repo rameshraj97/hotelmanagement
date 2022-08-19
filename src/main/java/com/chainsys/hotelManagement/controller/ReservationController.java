@@ -27,14 +27,14 @@ public String ReservationAddForm(Model model)
     model.addAttribute("addreservation",reservation);
     return "add-reservation-form";
 }
-//--------------------------------------
+
 @PostMapping("/add")
 public String addnewReservation(@ModelAttribute("addreservation")Reservation reservation)
 {
 	reservationService.save(reservation);
   return "redirect:/reservation/list";
 }
-//-------------------------------------
+
 @GetMapping("/updateform")
 public String showUpdateForm(@RequestParam("id") int id,Model model)
 {
@@ -42,26 +42,26 @@ public String showUpdateForm(@RequestParam("id") int id,Model model)
     model.addAttribute("updatereservation", reservation);
     return "update-reservation";
 }
-//-------------------------------------------
+
 @PostMapping("/updatereservation")
 public String updateReservation(@ModelAttribute("updatereservation") Reservation reservation) {
 	reservationService.save(reservation);
     return "redirect:/reservation/list";
 }
-//---------------------------------------
+
 @GetMapping("/deletereservation")
 public String deletereservation(@RequestParam("reservationid") int id) {
 	reservationService.deleteById(id);
     return "redirect:/reservation/list";
 }
-//-------------------------------------------------------------------
+
 @GetMapping("/findreservationbyid")
 public String findReservationById(@RequestParam("reservationid") int id,Model model) {
     Reservation reservation= reservationService.findById(id);
     model.addAttribute("findreservationbyid", reservation);
     return "find-reservation";
 }
-//----------------------------------------------------------------------
+
 @GetMapping("/list")
 public String getAllReservation(Model model)
 {

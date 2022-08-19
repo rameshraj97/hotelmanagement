@@ -40,8 +40,7 @@ public class Logic {
 	
 	public static LocalDate getSystemDate()
 	{
-		LocalDate date=LocalDate.now();
-		return  date;
+		return LocalDate.now();
 	}
 	public static LocalDate getMinAge() {
         LocalDate date = LocalDate.now();

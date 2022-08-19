@@ -14,19 +14,18 @@ public class BillService {
 
 	
 	public List<Bill> getBill() {
-		List<Bill> listbill = billRepositoryRepo.findAll();
-		return listbill;
+		return billRepositoryRepo.findAll();
 	}
-//---------------------------------------------
+
 	public Bill save(Bill bill ) {
 
 		return billRepositoryRepo.save(bill);
 	}
-	//-------------------------------------
+	
 	public Bill findById(int id) {
 		return billRepositoryRepo.findById(id);
 	}	
-	//-------------------------------------
+	
 	public void deleteById(int id) {
 		billRepositoryRepo.deleteById(id);
 	}

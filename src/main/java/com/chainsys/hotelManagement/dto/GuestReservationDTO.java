@@ -8,7 +8,7 @@ import com.chainsys.hotelManagement.model.Reservation;
 
 public class GuestReservationDTO {
 	private Guest guest;
-	private List<Reservation> reservationList=new ArrayList<Reservation>();
+	private List<Reservation> reservationList=new ArrayList<>();
 	public Guest getGuest() {
 		return guest;
 	}

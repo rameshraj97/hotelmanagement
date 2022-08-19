@@ -28,7 +28,7 @@ public class BillController {
 	    model.addAttribute("addbill",bill);
 	    return "add-bill-form";
 	}
-	//-------------------------------------
+	
 	@PostMapping("/add")
 	public String addnewBill(@ModelAttribute("addbill")Bill bill,Model model)
 	{
@@ -36,7 +36,7 @@ public class BillController {
 	  model.addAttribute("result","Thank you");
 	  return "redirect:/bill/list";
 	}
-	//----------------------------------
+	
 	@GetMapping("/updateform")
 	public String showUpdateForm(@RequestParam("billid") int id,Model model)
 	{
@@ -44,13 +44,13 @@ public class BillController {
 	    model.addAttribute("updatebill",bill);
 	    return "update-bill";
 	}
-	//--------------------------------------
+	
 	@PostMapping("/updatebill")
 	public String updateBill(@ModelAttribute("updatebill") Bill bill) {
 		billService.save(bill);
 	    return "redirect:/bill/list";
 	}
-	//--------------------------------------
+
 	@GetMapping("/deletehotel")
 	public String deleteBill(@RequestParam("billid") int id) {
 		billService.deleteById(id);
@@ -63,7 +63,6 @@ public class BillController {
 	    model.addAttribute("findbillbyid", bill);
 	    return "find-bill";
 	}
-	//-----------------------------------
 	@GetMapping("/list")
 	public String getAllBill(Model model)
 	{

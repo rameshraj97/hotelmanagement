@@ -35,7 +35,7 @@ public class RoomController {
 		return "add-room-form";
 	}
 
-//------------------------------------------
+
 	@PostMapping("/add")
 	public String addnewRoom(@ModelAttribute("addroom") Room room, @RequestParam("roomImage") MultipartFile file,
 			@RequestParam("imgName") String imgName) throws IOException {
@@ -59,7 +59,7 @@ public class RoomController {
 
 	}
 
-//-------------------------------------------
+
 	@GetMapping("/updateform")
 	public String showUpdateForm(@RequestParam("roomid") int id, Model model) {
 		Room room = roomService.findById(id);
@@ -67,21 +67,20 @@ public class RoomController {
 		return "update-room";
 	}
 
-//--------------------------------------------
 	@PostMapping("/updateroom")
 	public String updateRoom(@ModelAttribute("updateRoom") Room room) {
 		roomService.save(room);
 		return "redirect:/room/list";
 	}
 
-//-------------------------------------------------
+
 	@GetMapping("/deleteroom")
 	public String deleteRoom(@RequestParam("roomid") int id) {
 		roomService.deleteById(id);
 		return "redirect:/room/list";
 	}
 
-//-----------------------------------
+
 	@GetMapping("/findbyid")
 	public String findRoomById(@RequestParam("id") int id, Model model) {
 		Room room = roomService.findById(id);
@@ -89,14 +88,14 @@ public class RoomController {
 		return "find-room";
 	}
 
-//------------------------------------
+
 	@GetMapping("/list")
 	public String getAllRoom(Model model) {
 		List<Room> roomlist = roomService.getRoom();
 		model.addAttribute("allroom", roomlist);
 		return "list-room";
 	}
-//-------------------one to many
+
 	@GetMapping("/getreservationlist")
 	public String getRoomReservation(@RequestParam("id") int id, Model model) {
 		RoomReservationDTO dto = roomService.getRoomReservation(id);

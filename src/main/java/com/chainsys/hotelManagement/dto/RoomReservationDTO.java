@@ -9,7 +9,7 @@ import com.chainsys.hotelManagement.model.Room;
 
 public class RoomReservationDTO {
 	private Room room;
-   private List<Reservation> reservationList= new ArrayList<Reservation>();
+   private List<Reservation> reservationList= new ArrayList<>();
 	
 	public Room getRoom() {
 		return room;

@@ -33,14 +33,6 @@ private String withToilet;
 private String image;
 
 
-//public String getAvailabity() {
-//	return availabity;
-//}
-//
-//public void setAvailabity(String availabity) {
-//	this.availabity = availabity;
-//}
-
 public String getImage() {
 	return image;
 }
