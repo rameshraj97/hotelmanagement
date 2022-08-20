@@ -36,7 +36,7 @@ public class BillController {
 	{
 		billService.save(bill);
 	  model.addAttribute("result","Thank you");
-	  return "redirect:/bill/list";
+	  return  LISTBILL;
 	}
 	
 	@GetMapping("/updateform")
