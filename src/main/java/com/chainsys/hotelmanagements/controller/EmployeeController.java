@@ -85,8 +85,8 @@ public class EmployeeController {
 		Employee user1 = employeeService.getEmpIdAndEmail(user.getEmpId(), user.getEmail());
 		if (user1 != null) {
 			return "redirect:/room/list";
-		} else
+		} else {
 			model.addAttribute("message", "Email or password mismatch");
-			return LOGIN;
+			return LOGIN;}
 	}
 }
