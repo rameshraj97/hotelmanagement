@@ -71,7 +71,7 @@ public class BillController {
 	    List <Bill> billlist =billService.getBill();
 	    model.addAttribute("allbill", billlist);
 	   
-	    return "list-bill";
+	    return LISTBILL;
 	}
 	}
 
