@@ -31,7 +31,7 @@ public class EmployeeController {
 	@PostMapping("/add")
 	public String addnewEmployee(@ModelAttribute("addemployee") Employee employee) {
 		employeeService.save(employee);
-		return "redirect:/employee/list";
+		return EMPLOYEELIST;
 	}
 
 
@@ -46,14 +46,14 @@ public class EmployeeController {
 	@PostMapping("/updateemployee")
 	public String updateEmployee(@ModelAttribute("updateemployee") Employee employee) {
 		employeeService.save(employee);
-		return "redirect:/employee/list";
+		return EMPLOYEELIST;
 	}
 
 
 	@GetMapping("/deleteemployee")
 	public String deleteEmployee(@RequestParam("employeeid") int id) {
 		employeeService.deleteById(id);
-		return "redirect:/employee/list";
+		return EMPLOYEELIST;
 	}
 
 
@@ -80,8 +80,8 @@ public class EmployeeController {
 	}
 
 	@PostMapping("/userlogin")
-	public String userLogin(@ModelAttribute("userlogin") Employee user3,Model model) {
-		Employee user1 = employeeService.getEmpIdAndEmail(user3.getEmpId(), user3.getEmail());
+	public String userLogin(@ModelAttribute("userlogin") Employee user,Model model) {
+		Employee user1 = employeeService.getEmpIdAndEmail(user.getEmpId(), user.getEmail());
 		if (user1 != null) {
 			return "redirect:/room/list";
 		} else

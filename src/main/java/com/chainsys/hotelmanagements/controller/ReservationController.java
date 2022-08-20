@@ -34,7 +34,7 @@ public String reservationAddForm(Model model)
 public String addnewReservation(@ModelAttribute("addreservation")Reservation reservation)
 {
 	reservationService.save(reservation);
-  return "redirect:/reservation/list";
+  return RESERVATIONLIST;
 }
 
 @GetMapping("/updateform")
@@ -48,13 +48,13 @@ public String showUpdateForm(@RequestParam("id") int id,Model model)
 @PostMapping("/updatereservation")
 public String updateReservation(@ModelAttribute("updatereservation") Reservation reservation) {
 	reservationService.save(reservation);
-    return "redirect:/reservation/list";
+    return RESERVATIONLIST;
 }
 
 @GetMapping("/deletereservation")
 public String deletereservation(@RequestParam("reservationid") int id) {
 	reservationService.deleteById(id);
-    return "redirect:/reservation/list";
+    return RESERVATIONLIST;
 }
 
 @GetMapping("/findreservationbyid")
