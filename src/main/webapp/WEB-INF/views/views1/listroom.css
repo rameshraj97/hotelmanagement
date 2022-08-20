@@ -4,8 +4,8 @@ body
 
     background-image:
      url("https://images.pexels.com/photos/1831234/pexels-photo-1831234.jpeg?cs=srgb&dl=pexels-madison-inouye-1831234.jpg&fm=jpg");
-    background-height: 786px;
-    background-width: 1366px;
+   background-size: 1366px 786px;
+        background-attachment: fixed;
     background-attachment: fixed;
     background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
