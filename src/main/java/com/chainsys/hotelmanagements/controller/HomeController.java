@@ -27,6 +27,7 @@ import com.chainsys.hotelmanagements.service.RoomService;
 public class HomeController {
 	@Autowired
 	private GuestService guestService;
+	private static final String GUESTLOGIN="guest-login-form";
 	@Autowired
 	private ReservationService reservationService ;
 	@Autowired
@@ -63,7 +64,7 @@ public class HomeController {
 		    
 		} else
 			model.addAttribute("message", "Email or password mismatch");
-			return "guest-login-form";
+			return GUESTLOGIN;
 	}
 	
 	@PostMapping("/add")

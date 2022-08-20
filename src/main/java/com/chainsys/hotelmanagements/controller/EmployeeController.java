@@ -19,7 +19,8 @@ import com.chainsys.hotelmanagements.service.EmployeeService;
 public class EmployeeController {
 	@Autowired
 	private EmployeeService employeeService;
-	public static final String EMPLOYEELIST = "redirect:/employee/list";
+	private static final String EMPLOYEELIST = "redirect:/employee/list";
+	private static final String LOGIN="Employeelogin";
 	@GetMapping("/addform")
 	public String employeeAddForm(Model model) {
 		Employee employee = new Employee();
@@ -76,7 +77,7 @@ public class EmployeeController {
 	public String employeeform(Model model) {
 		Employee theemp = new Employee();
 		model.addAttribute("employee", theemp);
-		return "Employeelogin";
+		return LOGIN;
 	}
 
 	@PostMapping("/userlogin")
@@ -86,6 +87,6 @@ public class EmployeeController {
 			return "redirect:/room/list";
 		} else
 			model.addAttribute("message", "Email or password mismatch");
-			return "Employeelogin";
+			return LOGIN;
 	}
 }

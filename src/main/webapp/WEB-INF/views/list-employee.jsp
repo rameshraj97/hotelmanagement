@@ -7,6 +7,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Hotel List</title>
+<style >
+<%@include file="views1/listemployee.css"%>
+</style>
 </head>
 <body>
     <div id="Table root"></div>

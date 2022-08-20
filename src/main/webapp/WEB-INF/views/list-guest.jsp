@@ -12,8 +12,7 @@
 </style>
 </head>
 <body>
-<table id="alter" class="center"><caption></caption><th></th>
- <h1 style="border:2 width:100%">Guest Details</h1>
+<h1 style="border:2 width:100%">Guest Details</h1>
     <div id="Table root"></div>
    <table style="border:2 width:100%"><caption></caption>
         <thead>

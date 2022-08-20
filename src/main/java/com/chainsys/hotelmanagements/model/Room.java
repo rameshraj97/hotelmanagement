@@ -64,8 +64,8 @@ public String getRoomType() {
 	return roomType;
 }
 
-public void setRoomType(String room_type) {
-	this.roomType = room_type;
+public void setRoomType(String roomtype) {
+	this.roomType = roomtype;
 }
 
 public String getCapacity() {

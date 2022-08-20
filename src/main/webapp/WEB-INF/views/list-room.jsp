@@ -13,7 +13,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- 
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 <%@include file="views1/listroom.css"%>	
 </style>
@@ -46,7 +47,7 @@
 						<em class='fas fa-rss' style='font-size:48px;color:red'></em>
 						<em class='fas fa-phone-volume' style='font-size:48px;color:red'></em>
 						<em class="fa fa-television" style="font-size:36px"></em>
-						 
+						 <em class="fa fa-hotel" style="font-size:36px"></em>
                          
 					</th>
 				

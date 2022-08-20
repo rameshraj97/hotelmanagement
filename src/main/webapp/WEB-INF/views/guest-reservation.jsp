@@ -75,10 +75,9 @@ text-align ="center"
 			</form:form>
 		</div>
 	</div>
-	
+    <table style="border:2 width:100%"><caption></caption>
 	<div id="Table root"></div>
-	  <table style="border:2 width:100%"><caption></caption>
-		<thead>
+       <thead>
 			<tr>
 				<th>ReservationNumber</th>
 				<th>GuestId</th>
