@@ -93,7 +93,7 @@ text-align ="center"
 				</tr>
 		</thead>
 		<tbody>
-				<!-- var-variables,items-collection -->
+			
 				<tr>
 					<td>${reservationdetails.reservationNumber}</td>
 					<td>${reservationdetails.guestId}</td>
